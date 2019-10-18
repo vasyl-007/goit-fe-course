@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="class_navigation">
+            <ul>
+                <!-- добавил ul лишь с той целью, что теги li не могут быть вложены в тег nav 
+                (хотя другого смысла, кроме требований Спецификации HTML, для добавления тега ul в данном случае не вижу) -->
+                <li><a href="#">LIFESTYLE</a></li>
+                <li><a href="#">PHOTODIARY</a></li>
+                <li><a href="#">MUSIC</a></li>
+                <li><a href="#">TRAVEL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="class_main">
+        <section class="class_section">
+            <!-- считаю, что каждая картина с подписью и текстом является секцией, имеет смысл и название, поэтому лучше оборачивать каждую секцию отдельно.
+            тем более, что может потребоваться добавить новые статьи и количество секций увеличится  -->
+            <img src="img/image-01.jpg" alt="image woman on music festival" width="420" height="280">
+            <p>LIFESTYLE</p>
+            <h2>More than just a music festival</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque minima quisquam, fugit
+                tempora quo error nulla assumenda perspiciatis ullam officiis doloribus pariatur. Eligendi
+                tenetur animi ducimus ullam porro mollitia.</p>
+        </section>
+
+        <section class="class_section">
+            <img src="img/image-02.jpg" alt="image a cup of coffee" width="420" height="280">
+            <p>LIFESTYLE</p>
+            <h2>Life tastes better with coffee</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque minima quisquam, fugit
+                tempora quo error nulla assumenda perspiciatis ullam officiis doloribus pariatur. Eligendi
+                tenetur animi ducimus ullam porro mollitia.</p>
+        </section>
+
+        <section class="class_section">
+            <img src="img/image-03.jpg" alt="image golden bridge" width="420" height="280">
+            <p>PHOTODIARY</p>
+            <h2>American dream</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque minima quisquam, fugit
+                tempora quo error nulla assumenda perspiciatis ullam officiis doloribus pariatur. Eligendi
+                tenetur animi ducimus ullam porro mollitia.</p>
+        </section>
+
+        <section class="class_section">
+            <img src="img/image-04.jpg" alt="image back of a man" width="420" height="280">
+            <p>PHOTODIARY</p>
+            <h2>A day exploring the Alps</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eaque minima quisquam,
+                fugit tempora quo error nulla assumenda perspiciatis ullam officiis doloribus pariatur.
+                Eligendi tenetur animi ducimus ullam porro mollitia.</p>
+        </section>
+    </main>
+    <footer>
+        <button>Load more</button>
+        <!-- button вынес за пределы main, т.к. эта кнопка может присутствовать и на других страницах и содержать доп. информацию, напр
+        коммерческое предложение, или рекламный ролик о продукции/товарах/компании  -->
+    </footer>
+</body>
+
+</html>
