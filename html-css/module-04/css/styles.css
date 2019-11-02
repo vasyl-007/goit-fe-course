@@ -17,15 +17,13 @@ html {
 }
 
 .wrapper {
-    width: 1170px;
-    /* добавил обертку, чтобы отступы от
-    левого и правого краев были, как на макете */
+    width: 1110px;
+    margin: 0 auto;
 }
 
 .container {
     width: 1110px;
     margin: 0 auto;
-    /* background-color: teal; */
 }
 
 body {
@@ -57,10 +55,7 @@ img {
 }
 
 .navigation__list {
-    margin-left: 380px;
-    /* вынужден задавть левый маржин, т.к. при флоте
-вправо лишек они перестраиваются в другом порядка
-(ссылка Home вконце меню, а не вначале) */
+    float: right;
 }
 
 .navigation__list li {
@@ -157,10 +152,12 @@ img {
 .products__list-item:hover .products__list-price {
     background-color: #7fd9c7;
 }
-/* .products__list-image {
+
+.products__list-image {
     width: 255px;
     height: 282px;
-} */
+}
+
 .products__list-title {
     width: 202px;
     height: 40px;
@@ -254,12 +251,19 @@ img {
     margin-bottom: 12px;
 }
 
-.download__button {
+.download {
     width: 160px;
     height: 52px;
     background-color: #4ec6ab;
-    color: #ffffff;
+    border-radius: 4px;
     margin-left: 10px;
     margin-bottom: 74px;
-    border-radius: 6px;
+    line-height: 52px;
+    text-align: center;
+}
+
+.download a {
+    color: #ffffff;
+    list-style: none;
+    text-decoration: none;
 }
