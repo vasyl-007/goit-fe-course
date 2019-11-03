@@ -187,6 +187,9 @@ img {
 }
 
 /* LATEST NEWS */
+.news {
+    padding-bottom: 74px;
+}
 .news__title {
     display: block;
     font-family: "Roboto", sans-serif;
@@ -251,7 +254,25 @@ img {
     margin-bottom: 12px;
 }
 
-.download {
+.news__list__items a {
+  
+}
+/* .download {
+    width: 160px;
+    height: 52px;
+    background-color: #4ec6ab;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-bottom: 74px;
+    line-height: 52px;
+    text-align: center;
+} */
+
+.download-more-articles {
+    display: block;
+    color: #ffffff;
+    list-style: none;
+    text-decoration: none;
     width: 160px;
     height: 52px;
     background-color: #4ec6ab;
@@ -262,8 +283,10 @@ img {
     text-align: center;
 }
 
-.download a {
-    color: #ffffff;
-    list-style: none;
-    text-decoration: none;
+.download-more-articles:hover {
+    background-color: #8c8c8c;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
