@@ -102,9 +102,9 @@ ol {
 .page-header {
     padding-top: 40px;
     padding-bottom: 228px;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, .9)), to(rgba(243, 129, 129, .9))),
-        url("../image/bg/bg-picture.jpg");
     background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, .9), rgba(243, 129, 129, .9)),
+        url("../image/bg/bg-picture.jpg");
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, .9)), to(rgba(243, 129, 129, .9))),
         url("../image/bg/bg-picture.jpg");
     background-image: linear-gradient(to top, rgba(252, 227, 138, .9), rgba(243, 129, 129, .9)),
         url("../image/bg/bg-picture.jpg");
@@ -142,12 +142,23 @@ ol {
     height: 18px;
 }
 
-.purchase-btn {
-    background-image: url("../image/btn/SHOPPING\ CART.png");
+.navigation__btn-svg {
+    height: 18px;
+    fill: #ffffff;
 }
 
-.find-btn {
-    background-image: url("../image/btn/MAGNIFYING\ GLASS.png");
+.navigation__btn-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 18px;
+    height: 18px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .navigation__logotype-link {
@@ -493,14 +504,14 @@ ol {
 
 .overlay-first {
     /* position: absolute; */
+    background-image: -o-linear-gradient(bottom,
+            rgba(252, 227, 138, 0.9),
+            rgba(243, 129, 129, 0.9)),
+        url("../image/team/1-Dix.jpg");
     background-image: -webkit-gradient(linear,
             left bottom, left top,
             from(rgba(252, 227, 138, 0.9)),
             to(rgba(243, 129, 129, 0.9))),
-        url("../image/team/1-Dix.jpg");
-    background-image: -o-linear-gradient(bottom,
-            rgba(252, 227, 138, 0.9),
-            rgba(243, 129, 129, 0.9)),
         url("../image/team/1-Dix.jpg");
     background-image: linear-gradient(to top,
             rgba(252, 227, 138, 0.9),
@@ -509,14 +520,14 @@ ol {
 }
 .overlay-second {
     /* position: absolute; */
+    background-image: -o-linear-gradient(bottom,
+            rgba(252, 227, 138, 0.9),
+            rgba(243, 129, 129, 0.9)),
+        url("../image/team/2-Campbell.jpg");
     background-image: -webkit-gradient(linear,
             left bottom, left top,
             from(rgba(252, 227, 138, 0.9)),
             to(rgba(243, 129, 129, 0.9))),
-        url("../image/team/2-Campbell.jpg");
-    background-image: -o-linear-gradient(bottom,
-            rgba(252, 227, 138, 0.9),
-            rgba(243, 129, 129, 0.9)),
         url("../image/team/2-Campbell.jpg");
     background-image: linear-gradient(to top,
             rgba(252, 227, 138, 0.9),
@@ -525,14 +536,14 @@ ol {
 }
 .overlay-third {
     position: absolute;
+    background-image: -o-linear-gradient(bottom,
+            rgba(252, 227, 138, 0.9),
+            rgba(243, 129, 129, 0.9)),
+        url("../image/team/3-Fertig.jpg");
     background-image: -webkit-gradient(linear,
             left bottom, left top,
             from(rgba(252, 227, 138, 0.9)),
             to(rgba(243, 129, 129, 0.9))),
-        url("../image/team/3-Fertig.jpg");
-    background-image: -o-linear-gradient(bottom,
-            rgba(252, 227, 138, 0.9),
-            rgba(243, 129, 129, 0.9)),
         url("../image/team/3-Fertig.jpg");
     background-image: linear-gradient(to top,
             rgba(252, 227, 138, 0.9),
@@ -679,14 +690,14 @@ input[type="radio"].visually-hidden {
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
     .page-header {
+        background-image: -o-linear-gradient(bottom,
+        rgba(252, 227, 138, .9),
+        rgba(243, 129, 129, .9)),
+            url("../image/bg/bg-picture@2x.jpg");
         background-image: -webkit-gradient(linear,
         left bottom, left top,
         from(rgba(252, 227, 138, .9)),
         to(rgba(243, 129, 129, .9))),
-            url("../image/bg/bg-picture@2x.jpg");
-        background-image: -o-linear-gradient(bottom,
-        rgba(252, 227, 138, .9),
-        rgba(243, 129, 129, .9)),
             url("../image/bg/bg-picture@2x.jpg");
         background-image: linear-gradient(to top,
         rgba(252, 227, 138, .9),
