@@ -1,0 +1,39 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+:root {
+  --main-width: 1204px;
+}
+
+.container {
+  width: var(--main-width);
+  margin: 0 auto;
+}
+
+body {
+  font-family: "RobotoR", sans-serif;
+  font-size: 15px;
+  color: $main-font-color;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}

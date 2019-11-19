@@ -1,0 +1,115 @@
+/* SERVICES */
+
+.services {
+  padding-top: 50px;
+  padding-bottom: 94px;
+}
+
+.section-title-main {
+  @extend %section-title-main-set;
+}
+
+.section-title-specific {
+  @extend %section-title-specific-set;
+}
+
+.section-title-main::after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: $bg-color;
+  margin: 30px auto 0 auto;
+}
+
+.list-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 380px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: 20px 2px;
+
+    -webkit-transition-property: border,
+      -webkit-transform,
+      -webkit-box-shadow;
+
+    transition-property: border,
+      -webkit-transform,
+      -webkit-box-shadow;
+
+    -o-transition-property: transform,
+      box-shadow,
+      border;
+
+    transition-property: transform,
+      box-shadow,
+      border;
+
+    transition-property: transform,
+      box-shadow,
+      border,
+      -webkit-transform,
+      -webkit-box-shadow;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+
+    &:hover {
+      -webkit-box-shadow: -5px 14px 28px rgba(149, 225, 211, 0.9),
+        -10px 5px rgba(55, 170, 149, 0.9);
+      box-shadow: -5px 14px 28px rgba(149, 225, 211, 0.9),
+        -10px 5px rgba(55, 170, 149, 0.9);
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      border: 2px 3px solid #c2c1c1;
+      border-radius: 2px;
+    }
+  }
+
+  &__item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 94px;
+  }
+
+  &__item:first-child {
+    background-image: url(../images/services-icons/1-alarm.png);
+  }
+
+  &__item:nth-child(2) {
+    background-image: url(../images/services-icons/2-line-graph.png);
+  }
+
+  &__item:nth-child(3) {
+    background-image: url(../images/services-icons/3-creativity.png);
+  }
+
+  &__item:nth-child(4) {
+    background-image: url(../images/services-icons/4-seo-icon.png);
+  }
+
+  &__item:nth-child(5) {
+    background-image: url(../images/services-icons/5-css-icon.png);
+  }
+
+  &__item:nth-child(6) {
+    background-image: url(../images/services-icons/6-digital.png);
+  }
+}
+
+.item-title {
+  margin-bottom: 20px;
+  padding-left: 82px;
+}
+
+.item-text {
+  padding-left: 82px;
+}

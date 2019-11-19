@@ -1,0 +1,76 @@
+/* FOOTER SECTION */
+
+.footer-section {
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid rgb(229, 229, 229);
+
+  .footer__ip-property {
+    font-family: "MontserratR", sans-serif;
+    font-size: 14px;
+    color: $title-font-color;
+
+    .footer__IP-firm-ref {
+      color: $bg-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer__form-input {
+  width: 380px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__form-input input {
+  width: 228px;
+  height: 80%;
+  font-family: "RobotoL-it", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: #cccccc;
+  padding-left: 14px;
+  border: 1px solid rgb(229, 229, 229);
+}
+
+.footer__form-input button {
+  width: calc(380px - 228px);
+  height: 80%;
+  font-family: "MontserratSB", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #95e1d3;
+  border: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
