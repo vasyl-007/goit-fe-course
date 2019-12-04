@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js-homework_04 | Vasyl Manyo</title>
+</head>
+
+<body>
+    <script src="./js/scriptTask_01.js"></script>
+    <script src="./js/scriptTask_02.js"></script>
+    <script type="text/javascript">
+        let userNumber = prompt("Какую задачу запустить от 1 до 2?")
+        if (userNumber === null) {
+            alert("Отменено пользователем!");
+        };
+        switch (userNumber) {
+            case "1":
+                task_01();
+                break;
+
+            case "2":
+                task_02();
+                break;
+
+            default:
+                if (isNaN(userNumber)) {
+                    alert("Было введено не число!");
+                } else {
+                    alert("Было введено недопустимое число за пределами диапазона, попробуйте еще раз!");
+
+                }
+        }
+    </script>
+</body>
+
+</html>
