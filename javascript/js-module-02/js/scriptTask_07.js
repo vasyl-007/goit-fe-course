@@ -10,18 +10,13 @@ function task_07() {
     }
   }
   function isLoginUnique(allLogins, login) {
-    for (const login of logins) {
-      if (logins.includes(login)) {
-        return false;
-      } else {
-        return true;
-      }
-    }
+    return allLogins.includes(login);
   }
+
   function addLogin(allLogins, login) {
     if (isLoginValid(login) === false) {
       console.log("Ошибка! Логин должен быть от 4 до 16 символов");
-    } else if (isLoginUnique(login) === false) {
+    } else if (isLoginUnique(allLogins, login) === true) {
       console.log("Такой логин уже используется!");
     } else {
       logins.push(login);
