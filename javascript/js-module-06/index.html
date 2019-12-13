@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js-homework_06 | Vasyl Manyo</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="./js/scriptTask_01.js"></script>
+    <script type="text/javascript" src="./js/scriptTask_02.js"></script>
+    <script type="text/javascript" src="./js/scriptTask_03.js"></script>
+    <script type="text/javascript" src="./js/scriptTask_04.js"></script>
+    <script type="text/javascript" src="./js/scriptTask_05.js"></script>
+    <script type="text/javascript" src="./js/scriptTask_06.js"></script>
+    <script type="text/javascript" src="./js/scriptTask_07.js"></script>
+    <script type="text/javascript" src="./js/scriptTask_08.js"></script>
+    <script type="text/javascript" src="./js/scriptTask_09.js"></script>
+    <script src="./js/scriptTask_10.js"></script>
+    <script type="text/javascript">
+        let userNumber = prompt("Какую задачу запустить от 1 до 10?")
+        if (userNumber === null) {
+            alert("Отменено пользователем!");
+        };
+        switch (userNumber) {
+            case "1":
+                task_01();
+                break;
+
+            case "2":
+                task_02();
+                break;
+
+            case "3":
+                task_03();
+                break;
+
+            case "4":
+                task_04();
+                break;
+
+            case "5":
+                task_05();
+                break;
+
+            case "6":
+                task_06();
+                break;
+
+            case "7":
+                task_07();
+                break;
+
+            case "8":
+                task_08();
+                break;
+
+            case "9":
+                task_09();
+                break;
+
+            case "10":
+                task_10();
+                break;
+
+            default:
+                if (isNaN(userNumber)) {
+                    alert("Было введено не число!");
+                } else {
+                    alert("Было введено недопустимое число за пределами диапазона, попробуйте еще раз!");
+
+                }
+        }
+    </script>
+</body>
+
+</html>
