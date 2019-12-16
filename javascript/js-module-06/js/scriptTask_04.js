@@ -1,62 +1,6 @@
-// Task_04
-function task_04() {
-  class StringBuilder {
-    constructor(string) {
-      this._value = string;
-    }
-    get value() {
-      return this._value;
-    }
-    append(str) {
-      this._value += str;
-    }
-    prepend(str) {
-      this._value = str + this._value;
-    }
-    pad(str) {
-      this._value = str + this._value;
-      this._value = this._value + str;
-    }
-  }
-  const builder = new StringBuilder(".");
+// // Task_04
 
-  builder.append("^");
-  console.log(builder.value); // '.^'
+// import users from "./scriptLibrary.js";
 
-  builder.prepend("^");
-  console.log(builder.value); // '^.^'
-
-  builder.pad("=");
-  console.log(builder.value); // '=^.^='
-}
-// =========================================
-// // task 4 (второй вариант решения с использованием сеттеров)
-
-// class StringBuilder {
-//   constructor(string) {
-//     this._value = string;
-//   }
-//   get value() {
-//     return this._value;
-//   }
-//   set append(str) {
-//     this._value += str;
-//   }
-//   set prepend(str) {
-//     this._value = str + this._value;
-//   }
-//   set pad(str) {
-//     this._value = str + this._value;
-//     this._value = this._value + str;
-//   }
-// }
-// const builder = new StringBuilder(".");
-
-// builder.append = "^";
-// console.log(builder.value); // '.^'
-
-// builder.prepend = "^";
-// console.log(builder.value); // '^.^'
-
-// builder.pad = "=";
-// console.log(builder.value); // '=^.^='
+// const getInactiveUsers = users => users.filter(user => user.isActive !== true)
+// console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]

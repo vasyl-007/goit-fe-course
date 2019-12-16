@@ -1,13 +1,13 @@
 // Task_01
 
+// import users from "./scriptLibrary.js";
 
-function task_01() {
-  import users from "./scriptLibrary.js";
+// const getUserNames = array => {
+//   return array.map(element => {
+//     return element.name;
+//   });
+// };
 
-  const getUserNames = users.map(user => {
-    return user.name;
-  });
-
-  console.log(getUserNames);
-}
-// ================================================
+// console.log(getUserNames(users));
+// // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+// // ================================================

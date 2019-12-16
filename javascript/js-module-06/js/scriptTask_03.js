@@ -1,38 +1,7 @@
-// Task_03
-function task_03() {
-  class Storage {
-    constructor(array) {
-      this.items = array;
-    }
-    getItems() {
-      return this.items;
-    }
-    addItem(item) {
-      return this.items.push(item);
-    }
-    removeItem(item) {
-      if (this.items.includes(item)) {
-        const index = this.items.indexOf(item);
-        this.items.splice(index, 1);
-        return this.items;
-      } else {
-        alert(`Невозможно удалить! ${item} не значится на складе`);
-      }
-    }
-  }
-  const storage = new Storage([
-    "Нанитоиды",
-    "Пролонгер",
-    "Железные жупи",
-    "Антигравитатор"
-  ]);
-  const items = storage.getItems();
-  console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
+// // Task_03
 
-  storage.addItem("Дроид");
-  console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
+// import users from "./scriptLibrary.js";
 
-  storage.removeItem("Пролонгер");
-  console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
-}
-// ======================================
+// const getUsersWithGender = (users, gender) => users.filter(user => user.gender === gender)
+// .map(user => user.name)
+// console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
