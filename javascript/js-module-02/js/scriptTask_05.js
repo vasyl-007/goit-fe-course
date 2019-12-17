@@ -5,14 +5,8 @@ function task_05() {
     const newStr = str.toLowerCase();
     const array = newStr.split(" ");
     for (let i = 0; i < array.length; i++) {
-      if (array[i].includes("spam") || array[i] === "sale") {
-        // можно решать через метод includes, а можно через сравнивание
+      if (array[i].includes("spam") || array[i].includes("sale")) {
         return true;
-      }
-      for (let j = 0; j < array[i].length; j++) {
-        if (array[i][j].includes("spam") || array[i][j].includes("sale")) {
-          return true;
-        }
       }
     }
     return false;
