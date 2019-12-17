@@ -1,8 +1,8 @@
-// // Task_07
+// Task_07
 
-// import users from "./scriptLibrary.js";
+import users from "./scriptLibrary.js";
 
-// const calculateTotalBalance = users =>
-//   users.reduce((totalBalance, user) => totalBalance + user.balance, 0);
+const calculateTotalBalance = users =>
+  users.reduce((totalBalance, user) => totalBalance + user.balance, 0);
 
-// console.log(calculateTotalBalance(users)); // 20916
+console.log(calculateTotalBalance(users)); // 20916

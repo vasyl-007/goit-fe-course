@@ -1,6 +1,6 @@
-// // Task_04
+// Task_04
 
-// import users from "./scriptLibrary.js";
+import users from "./scriptLibrary.js";
 
-// const getInactiveUsers = users => users.filter(user => user.isActive !== true)
-// console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+const getInactiveUsers = users => users.filter(user => user.isActive !== true)
+console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
