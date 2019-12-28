@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>homework_js_module_11 || Vasyl Manyo</title>
+</head>
+<body>
+  <script id="template" type="text/x-handlebars-template">
+
+    <h1>{{name}}</h1>
+    <div class="body">
+      <p>Capital: {{capital}}</p>
+      <p>Population: {{population}}</p>
+      <ul>Languages:
+        {{#each languages}}
+        <li>{{this.name}}</li>
+        {{/each}}
+      </ul>
+      <img src="{{flag}}" alt="">
+    </div>
+  </script>
+
+  <input type="text" id="search-input" placeholder="Search for a country...">
+  <div class="output"></div>
+  <ul class="output-list"></ul>
+  
+  <script src="handlebars-v4.5.3.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
