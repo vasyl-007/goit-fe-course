@@ -35,11 +35,11 @@ function clickEvent(e) {
   if (bodyTheme.classList.contains('light-theme')) {
     bodyTheme.classList.remove('light-theme');
     bodyTheme.classList.add('dark-theme');
-    localStorage.setItem('Theme', 'DARK');
+    localStorage.setItem('Theme', Theme.DARK);
   } else {
     bodyTheme.classList.remove('dark-theme');
     bodyTheme.classList.add('light-theme');
-    localStorage.setItem('Theme', 'LIGHT');
+    localStorage.setItem('Theme', Theme.LIGHT);
   }
 }
 
