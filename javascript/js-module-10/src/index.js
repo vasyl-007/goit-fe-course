@@ -23,24 +23,24 @@ const currentTheme = localStorage.getItem('Theme');
 const checkBox = document.querySelector('input[type="checkbox"]');
 input.addEventListener('click', clickEvent);
 
-if (currentTheme == 'DARK') {
-  bodyTheme.classList.add('dark-theme');
+if (currentTheme == Theme.DARK) {
+  bodyTheme.classList.add(Theme.DARK);
   checkBox.checked = true;
 } else {
-  bodyTheme.classList.add('light-theme');
+  bodyTheme.classList.add(Theme.LIGHT);
   checkBox.checked = false;
 }
 
 function clickEvent(e) {
-  if (bodyTheme.classList.contains('light-theme')) {
-    bodyTheme.classList.remove('light-theme');
-    bodyTheme.classList.add('dark-theme');
+  if (bodyTheme.classList.contains(Theme.LIGHT)) {
+    bodyTheme.classList.remove(Theme.LIGHT);
+    bodyTheme.classList.add(Theme.DARK);
     localStorage.setItem('Theme', Theme.DARK);
   } else {
-    bodyTheme.classList.remove('dark-theme');
-    bodyTheme.classList.add('light-theme');
+    bodyTheme.classList.remove(Theme.DARK);
+    bodyTheme.classList.add(Theme.LIGHT);
     localStorage.setItem('Theme', Theme.LIGHT);
   }
 }
 
-localStorage.getItem('Theme');
+
