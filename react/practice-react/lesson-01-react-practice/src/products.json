@@ -1,0 +1,16 @@
+[
+  {
+    "id": "id-1",
+    "name": "Tacos With Lime",
+    "imgUrl": "https://picsum.photos/seed/picsum/200/300",
+    "alt": "Tacos With Lime",
+    "price": 10
+  },
+  {
+    "id": "id-2",
+    "name": "Working day",
+    "imgUrl": "https://picsum.photos/200/300?grayscale",
+    "alt": "Working day",
+    "price": 20
+  }
+]
