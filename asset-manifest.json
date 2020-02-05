@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.9dbd2b6b.chunk.js",
-    "main.js.map": "/static/js/main.9dbd2b6b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.54a4871b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.54a4871b.js.map",
-    "static/js/2.8c9f5ff3.chunk.js": "/static/js/2.8c9f5ff3.chunk.js",
-    "static/js/2.8c9f5ff3.chunk.js.map": "/static/js/2.8c9f5ff3.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.e5304ade1f9a871c575afee536e4b3e0.js": "/precache-manifest.e5304ade1f9a871c575afee536e4b3e0.js",
-    "service-worker.js": "/service-worker.js",
-    "static/js/2.8c9f5ff3.chunk.js.LICENSE.txt": "/static/js/2.8c9f5ff3.chunk.js.LICENSE.txt"
+    "main.js": "/goit-fe-course/static/js/main.e5618124.chunk.js",
+    "main.js.map": "/goit-fe-course/static/js/main.e5618124.chunk.js.map",
+    "runtime-main.js": "/goit-fe-course/static/js/runtime-main.df09db09.js",
+    "runtime-main.js.map": "/goit-fe-course/static/js/runtime-main.df09db09.js.map",
+    "static/js/2.8c9f5ff3.chunk.js": "/goit-fe-course/static/js/2.8c9f5ff3.chunk.js",
+    "static/js/2.8c9f5ff3.chunk.js.map": "/goit-fe-course/static/js/2.8c9f5ff3.chunk.js.map",
+    "index.html": "/goit-fe-course/index.html",
+    "precache-manifest.73670d42488e55e5ca5963135935c26b.js": "/goit-fe-course/precache-manifest.73670d42488e55e5ca5963135935c26b.js",
+    "service-worker.js": "/goit-fe-course/service-worker.js",
+    "static/js/2.8c9f5ff3.chunk.js.LICENSE.txt": "/goit-fe-course/static/js/2.8c9f5ff3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.54a4871b.js",
+    "static/js/runtime-main.df09db09.js",
     "static/js/2.8c9f5ff3.chunk.js",
-    "static/js/main.9dbd2b6b.chunk.js"
+    "static/js/main.e5618124.chunk.js"
   ]
 }
