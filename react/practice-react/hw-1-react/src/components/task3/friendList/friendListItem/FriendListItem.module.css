@@ -1,0 +1,26 @@
+.item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+.isOnline {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green
+}
+
+.isOffline {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red
+}
+.name {
+    width: 40px;
+}
