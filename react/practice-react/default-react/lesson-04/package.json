@@ -13,13 +13,14 @@
     "react-select": "^3.0.8",
     "shortid": "^2.2.15"
   },
+  "homepage": "https://vasyl-007.github.io/goit-fe-course/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://vasyl-007.github.io/goit-fe-course/"
+  }
 }
