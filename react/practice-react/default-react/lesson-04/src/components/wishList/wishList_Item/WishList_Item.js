@@ -22,7 +22,7 @@ const choosePriority = {
 //       border = { border: "1px solid red" };
 //       break;
 //     default:
-//       border = { border: "1px solid green" };
+//       border = { border: "1px solid green" };  
 //       break;
 //   }
 //   return border;
