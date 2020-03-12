@@ -3,6 +3,7 @@ import Form from "./form/Form";
 import WishList from "./wishList/WishList";
 import WishForm from "./wishForm/WishForm";
 import Feedback from "./espresso/Feedback";
+import Counter from "./counter/Counter";
 //=============================================
 import ContactList from "./contacts/ContactList";
 //=============================================
@@ -60,6 +61,7 @@ class App extends Component {
 
         <Feedback />
         <ContactList />
+        <Counter />
       </>
     );
   }

@@ -1,0 +1,137 @@
+/* CONTACT */
+.contact {
+  padding: 100px 0;
+}
+
+.contact__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__list {
+  width: 236px;
+}
+
+.contact__form {
+  width: 730px;
+}
+
+.contact__list-title {
+  font-family: "MontserratSB", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.contact__list-link {
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #555;
+}
+
+.contact__list-link span {
+  display: block;
+}
+
+.contact__list-item {
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding-left: 30px;
+}
+
+.contact__list-item:first-child {
+  background-image: url("../images/contacts/geo.png");
+}
+
+.contact__list-item:nth-child(2) {
+  background-image: url("../images/contacts/mobile.png");
+}
+
+.contact__list-item:last-child {
+  background-image: url("../images/contacts/email.png");
+}
+
+.contact__list-item:nth-child(2) .contact__list-link:last-child {
+  display: block;
+}
+
+.contact__list-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.contact__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact__form-input {
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+  padding-left: 12px;
+  width: 348px;
+  height: 42px;
+  border: 1px solid rgb(85, 85, 85);
+  margin-bottom: 22px;
+}
+
+.contact__form-input::placeholder {
+  text-transform: uppercase;
+}
+
+.contact__form-input:focus {
+  outline: none;
+}
+
+.contact__form-input[required]:focus:valid {
+  border: 1px solid green;
+}
+
+.contact__form-input[required]:focus:invalid {
+  border: 1px solid red;
+}
+
+.contact__form-textarea {
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+  width: 100%;
+  height: 102px;
+  border: 1px solid rgb(85, 85, 85);
+  resize: none;
+  padding: 16px 0 0 16px;
+  margin-bottom: 20px;
+}
+
+.contact__form-textarea::placeholder {
+  text-transform: uppercase;
+}
+
+.contact__form-btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.contact__form-btn {
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  width: 168px;
+  height: 42px;
+  border: 1px solid rgb(85, 85, 85);
+  margin-right: 40px;
+  background-color: transparent;
+}
+
+.contact__form-description {
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+  color: #555;
+}
+
+.contact__form-description span {
+  color: red;
+}

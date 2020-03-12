@@ -1,0 +1,137 @@
+/* ABOUT */
+.about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f8f8f8;
+}
+
+.about__descriptions {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__description {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #555;
+  width: 554px;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__item {
+  position: relative;
+}
+
+.slider__item:hover .overlay {
+  opacity: 1;
+}
+
+.slider__item-name {
+  font-family: "MontserratSB", sans-serif;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.slider__item-position {
+  font-family: "Roboto Slab", serif;
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+}
+
+.slider__img {
+  margin-bottom: 20px;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider__btns {
+  position: absolute;
+  width: 100%;
+  top: 104px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__btn {
+  width: 35px;
+  height: 38px;
+  background-color: rgb(192, 48, 28);
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.inactive {
+  background-color: #8d8d8d;
+}
+
+.prev {
+  background-image: url("../images/about/left-arrow.png");
+}
+
+.next {
+  background-image: url("../images/about/right-arrow.png");
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-color: rgba(85, 85, 85, 0.5);
+  background-clip: padding-box;
+  opacity: 0;
+  transition: all 0.5s linear;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+}
+
+.social-list {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list__link {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-list__link:hover {
+  background-color: rgb(192, 48, 28);
+}
+
+.social-list__item:first-child .social-list__link {
+  background-image: url("../images/about/facebook.png");
+}
+
+.social-list__item:nth-child(2) .social-list__link {
+  background-image: url("../images/about/twitter.png");
+}
+
+.social-list__item:nth-child(3) .social-list__link {
+  background-image: url("../images/about/google-plus.png");
+}
+
+.social-list__item:last-child .social-list__link {
+  background-image: url("../images/about/linkedin.png");
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Module 08</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|Ubuntu:400,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-5 col-md-3 col-xl-2">
+                    <a href="#" class="logotype">
+                        <picture class="logotype__pic">
+                            <source srcset="./images/logo-tablet.png" media="(min-width: 768px)">
+                            <source srcset="./images/logo.png" media="(min-width: 320px)">
+                            <img src="./images/logo.png" alt="logo" class="logotype__img">
+                        </picture>
+                    </a>
+                </div>
+                <div class="col-3 col-md-1 d-xl-none">
+                    <button class="header__burger"></button>
+                </div>
+                <div class="col-12 d-none d-xl-block col-xl-10">
+                    <nav class="header__navigation">
+                        <ul class="header__navigation-list">
+                            <li class="header__navigation-list-item">Front-End</li>
+                            <li class="header__navigation-list-item">Game Dev</li>
+                            <li class="header__navigation-list-item">Smart Design</li>
+                            <li class="header__navigation-list-item">GoStart Kids</li>
+                            <li class="header__navigation-list-item">Вакансії</li>
+                            <li class="header__navigation-list-item">Контакти</li>
+                        </ul>
+                        <button class="header__navigation-btn">Залишити заявку</button>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="header__title">Наша місія</h1>
+                    <p class="header__description">Допомогти кожному підлітку
+                        створити свою <span>історію успіху</span></p>
+                    <button class="header__scroll d-xl-none"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

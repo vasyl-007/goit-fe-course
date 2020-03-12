@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url("../images/header/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 256px;
+}
+
+.navigation {
+    margin-bottom: 260px;
+}
+
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    float: left;
+}
+
+.header__list {
+    margin-top: 7px;
+    float: right;
+}
+
+.header__list-item {
+    float: left;
+}
+
+.header__list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.header__list-link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #fff;
+}
+
+.header__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header__subtitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.header__btn {
+    display: block;
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 2px;
+    width: 176px;
+    height: 46px;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.header__btn:hover {
+    background-color: #fff;
+    color: #c0301c;
+}
+
+/* SERVICES */
+.services {
+    padding: 100px 0;
+}
+
+.sections-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #555555;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.sections-title::after {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: rgb(85, 85, 85);
+    margin: 30px auto 0 auto;
+}
+
+.sections-subtitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.services__list-item {
+    float: left;
+    width: 350px;
+    margin-right: 45px;
+}
+
+.services__list-item::before {
+    display: block;
+    content: "";
+    width: 86px;
+    height: 86px;
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.services__list-item:first-child::before {
+    background-image: url("../images/services/support.png");
+}
+
+.services__list-item:nth-child(2)::before {
+    background-image: url("../images/services/code.png");
+}
+
+.services__list-item:last-child::before {
+    background-image: url("../images/services/support.png");
+}
+
+.services__list-item:last-child {
+    margin-right: 0;
+}
+
+.services__list-item-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555555;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.services__list-item-text {
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #555555;
+}
+
+
+/* ABOUT */
+.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #f8f8f8;
+}
+
+.about__descriptions {
+    margin-bottom: 70px;
+}
+
+.about__description {
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #555;
+    float: left;
+    width: 554px;
+}
+
+.about__description:last-child {
+    float: right;
+}
+
+.slider__item {
+    float: left;
+}
+
+.slider__item:not(:last-child) {
+    margin-right: 29px;
+}
+
+.slider__item-name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.slider__item-position {
+    font-family: "Roboto Slab", serif;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+}
+
+.slider__img {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,109 @@
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+    font-family: 'MontserratR';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('../fonts/montserratRegular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserratRegular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+    font-family: 'MontserratB';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+        url('../fonts/montserratBold.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserratBold.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 
+- adaptive vs responsive
+- mobile first vs desktop first
+- devtools
+- min-width
+- max-width 
+- and
+- or (,)
+- media types, orientation
+*/
+
+
+
+/* @media (min-width: 960px) {
+    body {
+        background-color: hotpink;
+    }
+} */
+
+.list {
+    width: 280px;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.list-item {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .list-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .list {
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .list-item {
+        width: 280px;
+    }
+
+    .link {
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+    .list-item:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 960px) {
+    .list {
+        width: 800px;
+    }
+
+    .list-item {
+        width: 180px;
+    }
+}

@@ -383,7 +383,7 @@ ol {
             transform: scale(1.1);
     border: 2px 3px solid #c2c1c1;
     border-radius: 2px;
-    /* самодеятельность: добавил немного стилизации */
+    /* самодеятельность : добавил немного стилизации */
 }
 
 .list-services__item:first-child {

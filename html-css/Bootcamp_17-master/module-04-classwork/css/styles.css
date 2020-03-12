@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+    /* background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://picsum.photos/900/900"); */
+    background-size: cover;
+    padding: 20px;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+/* .box {
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(to bottom, red 0% 20%, blue 20% 40%, violet 40% 60%, teal 60% 100%); */
+/* background-image: radial-gradient(circle at left, red, blue);
+} */
+
+/* .text::before {
+    content: "i`m before ";
+} */
+
+/* .text {
+    text-align: center;
+} */
+
+
+/* .text::after {
+    display: block;
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: #000;
+    margin: 0 auto;
+    margin-top: 20px;
+} */
+
+/* .list-item:first-child .list-link {
+    color: aqua;
+}
+
+.list-item:last-child .list-link {
+    color: violet;
+}
+
+.list-item:nth-child(2) .list-link,
+.list-item:nth-child(3) .list-link {
+    color: yellowgreen;
+} */
+
+/* an + b */
+/* 2*0 + 1 = 1;
+2*1 + 1 = 3;
+2*2 + 1 = 5; */
+/* 
+4*0 - 7 = -7;
+4*1 - 7 = -3;
+4*2 - 7 = 1;
+4*3 - 7 = 5;
+4*4 -7 = 9; */
+
+
+/* .list-item:nth-child(4n - 7) .list-link {
+    color: violet;
+}
+ */
+
+/* a {
+    display: block;
+} */
+
+/* .list-link {
+    margin-bottom: 20px;
+} */
+/* 
+-0+2=2;
+-1+2=1; */
+
+/* .list-item:nth-last-child(-n + 2) {
+    margin-bottom: 20px;
+} */
+
+/* .list-item:not(:last-child) {
+    margin-bottom: 20px;
+} */
+
+/* .box {
+    width: 100px;
+    height: 100px;
+}
+
+.box:first-child {
+    float: left;
+    background-color: tomato;
+}
+
+.box:nth-child(2) {
+    float: left;
+    width: 120px;
+    background-color: violet;
+}
+
+.box:last-child {
+    width: 240px;
+    background-color: aqua;
+    float: left;
+} */
+
+.image {
+    float: left;
+    margin-right: 10px;
+}
+
+.underImg {
+    /* background-color: violet; */
+}

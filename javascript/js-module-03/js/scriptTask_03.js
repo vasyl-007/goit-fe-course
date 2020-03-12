@@ -1,7 +1,6 @@
 // Task_03
 function task_03() {
   const findBestEmployee = function(employees) {
-    const namesOfEmployees = Object.keys(employees);
     let maxValue = 0;
     let bestEmployer;
     for (const value in employees) {

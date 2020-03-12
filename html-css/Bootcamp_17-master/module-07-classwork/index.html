@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Module 07</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- <h1 class="title">I`m title</h1>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, doloribus!</p>
+
+    <div class="container">
+        <div class="element"></div>
+        <div class="element-2"></div>
+    </div> -->
+
+    <form action="#" method="GET" class="form">
+        <input type="text" class="form__input" name="name" placeholder="Enter your name...">
+        <input type="tel" class="form__input" name="phone" placeholder="Enter your phone...*" required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+        <input type="email" class="form__input" name="email" placeholder="Enter your email...*" required>
+
+        <section>
+            <h2>hobby</h2>
+            <label>
+                <input type="checkbox" name="hobby" class="form__checkbox" value="football" checked>
+                football
+            </label>
+
+            <input id="boxing" type="checkbox" name="hobby" class="form__checkbox" value="boxing">
+            <label for="boxing">boxing</label>
+
+            <input id="swiming" type="checkbox" name="hobby" class="form__checkbox" value="swiming">
+            <label for="swiming">swiming</label>
+        </section>
+
+        <section>
+            <h2>age</h2>
+            <input type="radio" name="age" class="form__checkbox" value="12">
+            12
+            <input type="radio" name="age" class="form__checkbox" value="13" checked>
+            13
+            <input type="radio" name="age" class="form__checkbox" value="14">
+            14
+        </section>
+
+        <section>
+            <h2>City</h2>
+            <select name="city" placeholder="Enter city" required>
+                <option value="default" selected disabled>Enter city...</option>
+                <option value="Kiev">Kiev</option>
+                <option value="Vinnitsa">Vinnitsa</option>
+                <option value="Odessa">Odessa</option>
+            </select>
+        </section>
+
+        <section>
+            <h2>Comment</h2>
+            <textarea name="comment" cols="30" rows="10" placeholder="Your message..."></textarea>
+        </section>
+        <button type="submit">submit</button>
+        <button type="reset">clear</button>
+    </form>
+
+</body>
+
+</html>

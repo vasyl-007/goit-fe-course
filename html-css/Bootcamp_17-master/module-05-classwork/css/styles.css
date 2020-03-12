@@ -1,0 +1,58 @@
+:root {
+    --main-color: orange;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 900px;
+    min-height: 160px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: teal;
+    position: relative;
+}
+
+.box {
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+}
+
+.box:first-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 240px;
+    background-color: brown;
+}
+
+.box:nth-child(2) {
+    width: 120px;
+    background-color: var(--main-color);
+}
+
+.box:nth-child(3) {
+    width: 120px;
+    background-color: teal;
+}
+
+.box:nth-child(4) {
+    width: 120px;
+    background-color: var(--main-color);
+}
+
+.box:last-child {
+    width: 100px;
+    background-color: turquoise;
+}

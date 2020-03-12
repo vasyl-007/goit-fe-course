@@ -1,0 +1,91 @@
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+    font-family: 'MontserratR';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('../fonts/montserratRegular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserratRegular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+    font-family: 'MontserratB';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+        url('../fonts/montserratBold.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserratBold.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .title {
+    font-family: "MontserratB", sans-serif;
+    font-size: 1rem;
+}
+
+.text {
+    font-family: "MontserratR", sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    width: 80vw;
+    margin: 0 auto;
+    height: 80vh;
+    background-color: teal;
+    display: flex;
+}
+
+.element {
+    width: 20%;
+    height: 100px;
+    background-color: violet;
+}
+
+.element-2 {
+    width: calc(1000px - 20%);
+    height: 100px;
+    background-color: yellowgreen;
+} */
+
+.form {
+    width: 900px;
+    min-height: 300px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .5);
+}
+
+.form__input {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #ccc;
+}
+
+.form__input:focus {
+    outline-offset: 0;
+    outline: none;
+}
+
+.form__input[required]:focus:valid {
+    border: 1px solid green;
+}
+
+.form__input[required]:focus:invalid {
+    border: 1px solid red;
+}
+
+textarea {
+    min-width: 150px;
+    max-width: 250px;
+    max-height: 200px;
+    /* resize: none; */
+}

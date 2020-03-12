@@ -9,14 +9,97 @@
 </head>
 
 <body>
-    <script src="./js/script.js" type="module"></script>
+    <!-- <script src="./js/script.js"></script> -->
     <!-- Не знаю, в каком виде лучше домашки отправлять, поэтому предлагаю два варианта -->
-    <script src="./js/scriptTask_01.js" type="module"></script>
-    <script src="./js/scriptTask_02.js" type="module"></script>
-    <script src="./js/scriptTask_03.js" type="module"></script>
-    <script src="./js/scriptTask_04.js" type="module"></script>
-    <script src="./js/scriptTask_05.js" type="module"></script>
-    <script src="./js/scriptTask_06.js" type="module"></script>
+    <script type="text/javascript" src="./js/scriptTask_01.js"></script>
+
+    <script type="text/javascript" src="./js/scriptTask_02.js"></script>
+    <script type="text/javascript" src="./js/scriptTask_03.js"></script>
+    <script type="text/javascript" src="./js/scriptTask_04.js"></script>
+    <script type="text/javascript" src="./js/scriptTask_05.js"></script>
+    <!-- <script type="text/javascript" src="./js/scriptTask_06.js"></script> -->
+    <script src="./js/scriptTask_06.js"></script>
+    <script type="text/javascript">
+        let userNumber = prompt("Какую задачу запустить от 1 до 6?")
+        if (userNumber === null) {
+            alert("Отменено пользователем!");
+        };
+        // if (Number(userNumber)) {
+        // while (userNumber > 0 && userNumber < 7) {
+        switch (userNumber) {
+            case "1":
+                task_01();
+                break;
+
+            case "2":
+                task_02();
+                break;
+
+            case "3":
+                task_03();
+                break;
+
+            case "4":
+                task_04();
+                break;
+
+            case "5":
+                task_05();
+                break;
+
+            case "6":
+                task_06();
+                break;
+
+            default:
+                if (isNaN(userNumber)) {
+                    alert("Было введено не число!");
+                } else {
+                    alert("Было введено недопустимое число за пределами диапазона, попробуйте еще раз!");
+
+                }
+        }
+        // }
+        // } else {
+        // alert("Был введен недопустимый символ, попробуйте еще раз!");
+        // }
+
+
+
+
+
+        // if (Number(userNumber)) {
+        //     switch (userNumber) {
+        //         case "1":
+        //             task_01();
+        //             break;
+
+        //         case "2":
+        //             task_02();
+        //             break;
+
+        //         case "3":
+        //             task_03();
+        //             break;
+
+        //         case "4":
+        //             task_04();
+        //             break;
+
+        //         case "5":
+        //             task_05();
+        //             break;
+
+        //         case "6":
+        //             task_06();
+        //             break;
+        //     }
+        // } else {
+        //     alert("Было введено недопустимое число либо другой символ, попробуйте еще раз!");
+        // }
+
+        // task_01();
+    </script>
 </body>
 
 </html>
