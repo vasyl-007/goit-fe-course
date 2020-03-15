@@ -1,11 +1,20 @@
 import React, { Component } from "react";
+import * as articleAPI from "../services/articles-api";
+import ArticleList from "../components/ArticleList";
 
 export default class ArticlesPage extends Component {
   state = { items: [] };
+
+  componentDidMount() {
+    articleAPI.fetchAricles().then(items => this.setState({ items }));
+  }
+
   render() {
+    const { items } = this.state;
     return (
       <>
         <h1>Articles page</h1>
+        <ArticleList items={items} />
         <h3>
           Since 2014, the Sonoma and Mendocino coast has lost 90% of its bull
           kelp forest due to climate change. Interestingly, the solution to the

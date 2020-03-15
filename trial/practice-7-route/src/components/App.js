@@ -2,9 +2,10 @@ import React from "react";
 import { Route, Switch, Link } from "react-router-dom";
 import HomePage from "../pages/Home";
 import AboutPage from "../pages/About";
-import ArticlesPage from "../pages/ArticlesPage";
+import ArticlesPage from "../pages/Articles";
 import NotFoundPage from "../pages/NotFound";
 import Nav from "../components/Nav";
+import ArticlePage from "../pages/Article";
 
 const containerStyles = {
   maxWidth: 1170,
@@ -34,6 +35,7 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/articles/:articleId" component={ArticlePage} />
         <Route path="/articles" component={ArticlesPage} />
         <Route component={NotFoundPage} />
       </Switch>
