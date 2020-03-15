@@ -1,6 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./Tasks.module.css";
+import PrioritySelector from "../prioritySelector/PrioritySelector";
+import Priority from "../../utils/Priority";
+import styles from "./Task.module.css";
+
+const options = Object.values(Priority);
 
 const Task = ({
   id,
@@ -11,20 +15,16 @@ const Task = ({
   onUpdateComplited,
   onUpdatePriority
 }) => (
-  <div className={`${styles.task} ${styles[`${priority} Priority`]}`}>
+  <div className={`${styles.task} ${styles[`${priority}Priority`]}`}>
     <p className={styles.text}>{text}</p>
 
     <hr />
     <div className={styles.actions}>
-      <select
-        name="priority"
+      <PrioritySelector
+        options={options}
         value={priority}
         onChange={e => onUpdatePriority(id, e.target.value)}
-      >
-        <option value="low">Low</option>
-        <option value="normal">Normal</option>
-        <option value="high">High</option>
-      </select>
+      />
 
       <label>
         Complited:
@@ -50,5 +50,3 @@ Task.propTypes = {
 };
 
 export default Task;
-
-

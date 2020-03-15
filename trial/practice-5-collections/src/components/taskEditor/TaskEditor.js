@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import PrioritySelector from "../prioritySelector/PrioritySelector";
+import Priority from "../../utils/Priority";
 import styles from "./TaskEditor.module.css";
+
+
+const options = Object.values(Priority);
 
 export default class TaskEditor extends Component {
   state = {
     text: "",
-    priority: "normal"
+    priority: Priority.NORMAL
   };
 
   handleChange = e => {
@@ -20,7 +25,7 @@ export default class TaskEditor extends Component {
 
     this.setState({
       text: "",
-      priority: "normal"
+      priority: Priority.NORMAL
     });
   };
   render() {
@@ -37,12 +42,10 @@ export default class TaskEditor extends Component {
         />
         <label className={styles.label}>
           Select task priority:
-          <select name="priority" value={priority} onChange={this.handleChange}>
-            <option value="low">Low</option>
-            <option value="normal">Normal</option>
-            <option value="high">High</option>
-          </select>
+          <PrioritySelector options={options} value={priority} onChange={this.handleChange} />
         </label>
+
+        <button type="sumbit">Create</button>
       </form>
     );
   }
