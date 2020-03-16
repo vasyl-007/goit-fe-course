@@ -1,8 +1,18 @@
 import React from "react";
 
-const Article = () => {
-  <>
-    <h3>
+const Article = ({ title, imageUrl, author, category, text }) => {
+  <article>
+    <h2>{title}</h2>
+    <img src={imageUrl} alt={title} />
+    <span>
+      <b>Author: {author}</b>
+    </span>
+    <span>
+      <b>Category: {category}</b>
+    </span>
+    <p>{text}</p>
+    <button type="button">Back to articles</button>
+    {/* <h3>
       Since 2014, the Sonoma and Mendocino coast has lost 90% of its bull kelp
       forest due to climate change. Interestingly, the solution to the crisis
       may involve eating purple sea urchin. Share on Facebook Share on Twitter
@@ -24,8 +34,8 @@ const Article = () => {
       barrens is staggering,” she said. “On the North Coast, we currently have
       250km of sea urchins, who not only survive in starvation conditions but
       also reproduce.”
-    </p>
-  </>;
+    </p> */}
+  </article>;
 };
 
 export default Article;

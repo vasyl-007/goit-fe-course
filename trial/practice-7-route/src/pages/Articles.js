@@ -6,7 +6,7 @@ export default class ArticlesPage extends Component {
   state = { items: [] };
 
   componentDidMount() {
-    articleAPI.fetchAricles().then(items => this.setState({ items }));
+    articleAPI.fetchArticles().then(items => this.setState({ items }));
   }
 
   render() {

@@ -3,9 +3,9 @@ import { Route, Switch, Link } from "react-router-dom";
 import HomePage from "../pages/Home";
 import AboutPage from "../pages/About";
 import ArticlesPage from "../pages/Articles";
+import ArticlePage from "../pages/Article";
 import NotFoundPage from "../pages/NotFound";
 import Nav from "../components/Nav";
-import ArticlePage from "../pages/Article";
 
 const containerStyles = {
   maxWidth: 1170,
