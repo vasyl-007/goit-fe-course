@@ -1,14 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ArticleListItem from "./ArticleListItem";
 import withLog from "./hoc/withLog";
 
 const ArticleList = ({ items }) => (
   <ul>
     {items.map(({ id, link, title }) => (
       <li key={id}>
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          {title}
-        </a>
+        <ArticleListItem link={link} title={title} />
       </li>
     ))}
   </ul>

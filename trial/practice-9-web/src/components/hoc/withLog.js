@@ -1,4 +1,6 @@
-import React from "react";
+/* eslint-disable */
+
+import React from 'react';
 
 const withLog = function(BaseComponent) {
   return function WithLog(props) {
@@ -6,5 +8,4 @@ const withLog = function(BaseComponent) {
     return <BaseComponent {...props} />;
   };
 };
-
 export default withLog;

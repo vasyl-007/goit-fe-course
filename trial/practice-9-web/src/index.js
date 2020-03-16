@@ -19,12 +19,13 @@ import "./styles.css";
 //   </article>
 // );
 
-const ArticleWithLog = withLog(Article);
+// const ArticleWithLog = withLog(Article);
 
-ReactDOM.render(
-  <ArticleWithLog title="title" text="text" />,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
+// ReactDOM.render(
+//   <ArticleWithLog title="title" text="text" />,
+//   document.getElementById("root")
+// );
 
 // const add = (a, b) => {
 //   //   console.log("args: ", a, b);
