@@ -1,6 +1,6 @@
 import React, { Component, createContext } from "react";
 
-const ReaderContext = createContext();
+export const ReaderContext = createContext();
 
 export default class Reader extends Component {
   static Consumer = ReaderContext.Consumer;
