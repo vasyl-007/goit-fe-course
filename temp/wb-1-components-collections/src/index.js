@@ -1,21 +1,64 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
+import Product from "./components/Product";
+import Panel from "./components/Panel";
+import ProfileDetails from "./components/ProfileDetails";
+import Portfolio from "./components/Portfolio";
 
-
-const Product = () => (
+ReactDOM.render(
   <Fragment>
-    <h3>John Wick 4K Ultra Hd [Blu-ray]</h3>
-    <p>329 $</p>
-    <img
-      src="https://images-na.ssl-images-amazon.com/images/I/51%2BCkK0MUKL.jpg"
-      width="400"
-      alt="John Wick 4K Ultra Hd"
+    <Panel title="Authorisation panel">
+      <ProfileDetails name="Ricky" email="ricky.margin@gmail.com" />
+      <Portfolio
+        workOne="JoJo's Bizarre Adventure"
+        workTwo="Thriller"
+        workThree="African adventure"
+      />
+    </Panel>
+    <Product
+      name="John Wick 4K Ultra Hd [Blu-ray]"
+      imageUrl="https://images-na.ssl-images-amazon.com/images/I/51%2BCkK0MUKL.jpg"
+      imageWidth="400"
+      productPrice={349}
+    >
+      ----------> Children are here
+    </Product>
+    <Product
+      name="Ex Machina"
+      imageUrl="https://images-na.ssl-images-amazon.com/images/I/51LnZI4zDaL.jpg"
+      imageWidth="400"
+      productPrice={29}
     />
-    <button type="button">Add to card</button>
-  </Fragment>
+    <Product
+      name="Saban's Power Rangers 4K Ultra HD"
+      imageUrl="https://images-na.ssl-images-amazon.com/images/I/61EfhxZpd6L.jpg"
+      imageWidth="400"
+      productPrice={89}
+    />
+  </Fragment>,
+  document.getElementById("root")
 );
-// ReactDOM.render(<Product />, document.getElementById("root"));
-ReactDOM.render(React.createElement(Product), document.getElementById("root")); // the same as a line above
+// ReactDOM.render(React.createElement(Product), document.getElementById("root")); // the same as a line above
+
+// ===============================================
+// const Product = ({ name, productPrice, imageUrl, imageWidth }) => (
+//   <Fragment>
+//     <h3>{name}</h3>
+//     <p>price: {productPrice} $</p>
+//     <img src={imageUrl} width={imageWidth} alt={name} />
+//     <button type="button">Add to card</button>
+//     <hr />
+//   </Fragment>
+// );
+// const Product = props => console.log('props', props) || (
+//   <Fragment>
+//     <h3>{props.name}</h3>
+//     <p>price: {props.productPrice} $</p>
+//     <img src={props.imageUrl} width={props.imageWidth} alt={props.name} />
+//     <button type="button">Add to card</button>
+//   </Fragment>
+// );
+
 // ========================================================
 
 // const productWithJSX = (
