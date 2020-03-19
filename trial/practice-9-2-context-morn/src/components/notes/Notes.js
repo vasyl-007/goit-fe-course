@@ -1,6 +1,7 @@
 import React, { Component, createContext } from "react";
 import Form from "../form/Form";
 import List from "../list/List";
+import { DefaultContext } from "../../App";
 
 export const NotesContext = createContext();
 
@@ -16,23 +17,29 @@ class Notes extends Component {
     }));
     // принимает note и пушит в массив notes
   };
-  
+
   render() {
     console.log("re-re-nder");
     const { notes } = this.state;
     return (
-      <>
-        <NotesContext.Provider
-          value={{
-            theme: "dark",
-            notes
-          }}
-        >
-
-          <Form onGetNoteInfo={this.getNoteInfo} />
-          <List />
-        </NotesContext.Provider>
-      </>
+      <DefaultContext.Consumer>
+        {defContext => {
+          console.log("defContext", defContext);
+          return (
+            <NotesContext.Provider
+              value={{
+                // theme: "dark",
+                notes,
+                handleSubmit: this.getNoteInfo,
+                theme: defContext.theme
+              }}
+            >
+              <Form onGetNoteInfo={this.getNoteInfo} />
+              <List />
+            </NotesContext.Provider>
+          );
+        }}
+      </DefaultContext.Consumer>
     );
   }
 }
