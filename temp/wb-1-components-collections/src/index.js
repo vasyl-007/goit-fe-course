@@ -1,43 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import Product from "./components/Product";
-import Panel from "./components/Panel";
-import ProfileDetails from "./components/ProfileDetails";
-import Portfolio from "./components/Portfolio";
+import App from "./components/App";
 
-ReactDOM.render(
-  <Fragment>
-    <Panel title="Authorisation panel">
-      <ProfileDetails name="Ricky" email="ricky.margin@gmail.com" />
-      <Portfolio
-        workOne="JoJo's Bizarre Adventure"
-        workTwo="Thriller"
-        workThree="African adventure"
-      />
-    </Panel>
-    <Product
-      name="John Wick 4K Ultra Hd [Blu-ray]"
-      imageUrl="https://images-na.ssl-images-amazon.com/images/I/51%2BCkK0MUKL.jpg"
-      imageWidth="400"
-      productPrice={349}
-    >
-      ----------> Children are here
-    </Product>
-    <Product
-      name="Ex Machina"
-      imageUrl="https://images-na.ssl-images-amazon.com/images/I/51LnZI4zDaL.jpg"
-      imageWidth="400"
-      productPrice={29}
-    />
-    <Product
-      name="Saban's Power Rangers 4K Ultra HD"
-      imageUrl="https://images-na.ssl-images-amazon.com/images/I/61EfhxZpd6L.jpg"
-      imageWidth="400"
-      productPrice={89}
-    />
-  </Fragment>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 // ReactDOM.render(React.createElement(Product), document.getElementById("root")); // the same as a line above
 
 // ===============================================
