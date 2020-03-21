@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+/* eslint-disable */
+import React, { Component, Fragment } from "react";
 import Product from "./Product";
 import Panel from "./Panel";
 import ProfileDetails from "./ProfileDetails";
@@ -9,6 +10,8 @@ import ProductList from "./ProductList";
 import products from "../products.json";
 import Dropdown from "./Dropdown";
 import Counter from "./Counter";
+import MessageUpdater from "./MessageUpdater";
+import PropTypes from "prop-types";
 
 const technologies = [
   { id: "id-1", name: "JS" },
@@ -17,46 +20,63 @@ const technologies = [
   { id: "id-4", name: "Redux" }
 ];
 
-const App = () => (
-  <Fragment>
-    <Counter step={5} initialValue={2050} />
-    <hr />
-    <Dropdown />
-    <Mailbox unreadMessages={[1, 2, 3]} />
-    <Panel title="Authorisation panel">
-      <ProfileDetails name="Ricky" email="ricky.margin@gmail.com" />
-      <Portfolio
-        workOne="JoJo's Bizarre Adventure"
-        workTwo="Thriller"
-        workThree="African adventure"
-      />
-    </Panel>
-    <Product
-      name="John Wick 4K Ultra Hd [Blu-ray]"
-      imageUrl="https://images-na.ssl-images-amazon.com/images/I/51%2BCkK0MUKL.jpg"
-      imageWidth="400"
-      productPrice={349}
-    >
-      ----------> Children are here
-    </Product>
-    <Product
-      name="Ex Machina"
-      imageUrl="https://images-na.ssl-images-amazon.com/images/I/51LnZI4zDaL.jpg"
-      imageWidth="400"
-      productPrice={29}
-    />
-    <Product
-      name="Saban's Power Rangers 4K Ultra HD"
-      imageUrl="https://images-na.ssl-images-amazon.com/images/I/61EfhxZpd6L.jpg"
-      imageWidth="400"
-      productPrice={89}
-    />
-    <TechList items={technologies} />
-    <Panel title="Top VR games in the world - 2020">
-      <ProductList items={products} />
-      <p>Amaizing goods for best prices ever</p>
-    </Panel>
-  </Fragment>
-);
+class App extends Component {
+  state = {
+    message: "What time is it? Click the button to know it!"
+  };
+
+  updateMessage = () => {
+    this.setState({ message: `Updated at: ${new Date()}` });
+  };
+  render() {
+    const { message } = this.state;
+    return (
+      <Fragment>
+        <>
+          <h4>{message}</h4>
+          {/* <button onClick={this.updateMessage}>Some Button</button> */}
+          <MessageUpdater updateTextMessage={this.updateMessage} />
+        </>
+        <Counter step={5} initialValue={2050} />
+        <hr />
+        <Dropdown />
+        <Mailbox unreadMessages={[1, 2, 3]} />
+        <Panel title="Authorisation panel">
+          <ProfileDetails name="Ricky" email="ricky.margin@gmail.com" />
+          <Portfolio
+            workOne="JoJo's Bizarre Adventure"
+            workTwo="Thriller"
+            workThree="African adventure"
+          />
+        </Panel>
+        <Product
+          name="John Wick 4K Ultra Hd [Blu-ray]"
+          imageUrl="https://images-na.ssl-images-amazon.com/images/I/51%2BCkK0MUKL.jpg"
+          imageWidth="400"
+          productPrice={349}
+        >
+          ----------> Children are here
+        </Product>
+        <Product
+          name="Ex Machina"
+          imageUrl="https://images-na.ssl-images-amazon.com/images/I/51LnZI4zDaL.jpg"
+          imageWidth="400"
+          productPrice={29}
+        />
+        <Product
+          name="Saban's Power Rangers 4K Ultra HD"
+          imageUrl="https://images-na.ssl-images-amazon.com/images/I/61EfhxZpd6L.jpg"
+          imageWidth="400"
+          productPrice={89}
+        />
+        <TechList items={technologies} />
+        <Panel title="Top VR games in the world - 2020">
+          <ProductList items={products} />
+          <p>Amaizing goods for best prices ever</p>
+        </Panel>
+      </Fragment>
+    );
+  }
+}
 
 export default App;

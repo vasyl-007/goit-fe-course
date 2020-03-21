@@ -6,13 +6,13 @@ export default class Dropdown extends Component {
   //   isOpen: false
   // };
 
-  // static defaultProps = {
-  //   isOpen: false
-  // };
+  static defaultProps = {
+    isOpen: false
+  };
 
-  // static propTypes = {
-  //   isOpen: PropTypes.bool
-  // };
+  static propTypes = {
+    isOpen: PropTypes.bool
+  };
 
   // changeToggle = () => {
   //   this.setState(prev => ({ isOpen: !prev.isOpen }));

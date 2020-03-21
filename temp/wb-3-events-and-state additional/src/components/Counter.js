@@ -1,13 +1,20 @@
 import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
+import Controls from "./Controls";
 
 // const INITIAL_STATE = 115;
 
 export default class Counter extends Component {
   static defaulProps = {
     // будет доступно в конструкторе
-    initialValue: 10
+    step: 1,
+    initialValue: 0
   };
 
+  static propTypes = {
+    step: PropTypes.number,
+    initialValue: PropTypes.number
+  };
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -29,6 +36,12 @@ export default class Counter extends Component {
     this.setState(prev => ({
       value: prev.value + this.props.step
     }));
+    // =====================
+    // this.setState((prev, props) => ({
+    //   // props в очень редких случаях также можно получать
+    //   value: prev.value + props.step // тоже работает
+    // }));
+    // =====================
 
     // setTimeout(() => {}, 1000);
     // console.log("this.state Counter", this.state);
@@ -78,57 +91,63 @@ export default class Counter extends Component {
     const { value } = this.state;
 
     return (
-      <Fragment>
-        <div
-          style={{
-            minWidth: 400,
-            display: "flex"
-          }}
-        >
-          <button
-            onClick={this.handleIncrement}
-            // onClick={this.handleIncrement.bind(this)}
-            // onClick={e => {
-            //   console.log("Increment button was clicked!", e);
-            //   console.log("this.props", this.props);
-            // }}
-            type="button"
-            style={{
-              minWidth: 120,
-              high: "auto",
-              border: "2px dashed green"
-            }}
-          >
-            Increment by {step}
-          </button>
-          <span
-            style={{
-              padding: "10px 26px",
-              fontSize: 22,
-              fontFamily: "monospace"
-            }}
-          >
-            {value}
-            {/* {INITIAL_STATE} */}
-          </span>
-          <button
-            onClick={this.handleDecrement}
-            // onClick={this.handleDecrement.bind(this)}
-            // onClick={e => {
-            //   console.log("Decrement button was clicked!", e);
-            //   console.log("this.props", this.props);
-            // }}
-            type="button"
-            style={{
-              minWidth: 120,
-              high: "auto",
-              border: "2px dashed red"
-            }}
-          >
-            Decrement by {step}
-          </button>
-        </div>
-      </Fragment>
+      <Controls
+        onIncrement={this.handleIncrement}
+        onDecrement={this.handleDecrement}
+        value={value}
+        step={step}
+      />
+      // <Fragment>
+      //   <div
+      //     style={{
+      //       minWidth: 400,
+      //       display: "flex"
+      //     }}
+      //   >
+      //     <button
+      //       onClick={this.handleIncrement}
+      //       // onClick={this.handleIncrement.bind(this)}
+      //       // onClick={e => {
+      //       //   console.log("Increment button was clicked!", e);
+      //       //   console.log("this.props", this.props);
+      //       // }}
+      //       type="button"
+      //       style={{
+      //         minWidth: 120,
+      //         high: "auto",
+      //         border: "2px dashed green"
+      //       }}
+      //     >
+      //       Increment by {step}
+      //     </button>
+      //     <span
+      //       style={{
+      //         padding: "10px 26px",
+      //         fontSize: 22,
+      //         fontFamily: "monospace"
+      //       }}
+      //     >
+      //       {value}
+      //       {/* {INITIAL_STATE} */}
+      //     </span>
+      //     <button
+      //       onClick={this.handleDecrement}
+      //       // onClick={this.handleDecrement.bind(this)}
+      //       // onClick={e => {
+      //       //   console.log("Decrement button was clicked!", e);
+      //       //   console.log("this.props", this.props);
+      //       // }}
+      //       type="button"
+      //       style={{
+      //         minWidth: 120,
+      //         high: "auto",
+      //         border: "2px dashed red"
+      //       }}
+      //     >
+      //       Decrement by {step}
+      //     </button>
+      //   </div>
+      // </Fragment>
     );
   }
 }
