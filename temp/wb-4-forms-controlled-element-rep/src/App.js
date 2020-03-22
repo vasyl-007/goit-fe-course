@@ -23,6 +23,7 @@ export default class App extends Component {
         <h4>IT WORKS</h4>
 
         <SignUpForm onSignUp={this.handleSignUp} />
+        {/* <Indicative /> */}
         {/* <input
           type="text"
           value={this.state.inputValue}
