@@ -1,16 +1,17 @@
 import { connect } from "react-redux";
 import * as timerActions from "../../redux/timerActions";
-import Timer from './Timer'
-
+import Timer from "./Timer";
 
 const mapStateToProps = state => ({
-  value: state.value
+  value: state.value,
+  step: state.step.value,
+//   step: state.step
   // newValue: "some value ---------->"
 });
 
 const mapDispatchToProps = dispatch => ({
-  onIncrement: () => dispatch(timerActions.increment(10)),
-  onDecrement: () => dispatch(timerActions.decrement(5))
+  onIncrement: (step) => dispatch(timerActions.increment(step)),
+  onDecrement: (step) => dispatch(timerActions.decrement(step))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Timer);

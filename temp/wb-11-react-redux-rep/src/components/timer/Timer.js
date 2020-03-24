@@ -3,15 +3,23 @@ import React from "react";
 import css from "./Timer.module.css";
 // import * as timerActions from "../../redux/timerActions";
 
-const Timer = ({ value, onIncrement, onDecrement }) => (
+const Timer = ({ value, step, onIncrement, onDecrement }) => (
   <div className={css.container}>
-    <button type="button" className={css.button} onClick={onDecrement}>
-      {/* <button type="button" className={css.button} onClick={() => onDecrement(5)}> */}
+    {/* <button type="button" className={css.button} onClick={onDecrement}> */}
+    <button
+      type="button"
+      className={css.button}
+      onClick={() => onDecrement(step)}
+    >
       &#8722;
     </button>
     <div className={css.value}>{value} minutes</div>
-    <button type="button" className={css.button} onClick={onIncrement}>
-      {/* <button type="button" className={css.button} onClick={() => onIncrement(5)}> */}
+    {/* <button type="button" className={css.button} onClick={onIncrement}> */}
+    <button
+      type="button"
+      className={css.button}
+      onClick={() => onIncrement(step)}
+    >
       &#43;
     </button>
   </div>
