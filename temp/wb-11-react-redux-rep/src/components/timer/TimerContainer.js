@@ -4,7 +4,8 @@ import Timer from './Timer'
 
 
 const mapStateToProps = state => ({
-  value: state.value
+  value: state.timer.value,
+  step: state.timer.step.value,
   // newValue: "some value ---------->"
 });
 
@@ -12,5 +13,15 @@ const mapDispatchToProps = dispatch => ({
   onIncrement: () => dispatch(timerActions.increment(10)),
   onDecrement: () => dispatch(timerActions.decrement(5))
 });
+
+// const mapStateToProps = state => ({
+//   value: state.value
+//   // newValue: "some value ---------->"
+// });
+
+// const mapDispatchToProps = dispatch => ({
+//   onIncrement: () => dispatch(timerActions.increment(10)),
+//   onDecrement: () => dispatch(timerActions.decrement(5))
+// });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Timer);
