@@ -1,0 +1,26 @@
+[
+  {
+    "id": "id-1",
+    "name": "A TIME IN SPACE VR CARDBOARD",
+    "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/71WIh2BBY1L.png",
+    "price": 119,
+    "alt": "VR CARDBOARD",
+    "desctiption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat cum veniam voluptatem molestias ab labore illo praesentium repellat? Veritatis, quod molestias. Provident eum rem corrupti consectetur nihil autem iste! Cum obcaecati nemo porro neque eligendi possimus quod, minima corporis dolorum rerum aliquid, maiores qui dolor quibusdam molestias eos voluptates? Corrupti, eligendi. Totam expedita a ex consequuntur, neque placeat similique?"
+  },
+  {
+    "id": "id-2",
+    "name": "VR video 360",
+    "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/911rI2uZdzL.png",
+    "price": 58,
+    "alt": "VR video 360",
+    "desctiption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat cum veniam voluptatem molestias ab labore illo praesentium repellat? Veritatis, quod molestias. Provident eum rem corrupti consectetur nihil autem iste! Cum obcaecati nemo porro neque eligendi possimus quod, minima corporis dolorum rerum aliquid, maiores qui dolor quibusdam molestias eos voluptates? Corrupti, eligendi. Totam expedita a ex consequuntur, neque placeat similique?"
+  },
+  {
+    "id": "id-3",
+    "name": "Asphalt 8: Airborne",
+    "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/81JXKsuTbIL.png",
+    "price": 119,
+    "alt": "Asphalt Airborne",
+    "desctiption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat cum veniam voluptatem molestias ab labore illo praesentium repellat? Veritatis, quod molestias. Provident eum rem corrupti consectetur nihil autem iste! Cum obcaecati nemo porro neque eligendi possimus quod, minima corporis dolorum rerum aliquid, maiores qui dolor quibusdam molestias eos voluptates? Corrupti, eligendi. Totam expedita a ex consequuntur, neque placeat similique?"
+  }
+]
