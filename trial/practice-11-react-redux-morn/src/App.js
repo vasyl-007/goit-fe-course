@@ -1,33 +1,48 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { connect } from "react-redux";
-
+import { increment, decrement } from "./redux/actions";
 function App(props) {
   console.log("props", props);
   return (
-    <div style={{ width: 300, margin: "0 auto" }}>
-      <h4>IT WORKS</h4>
-      <button type="button" onClick={() => props.increment(4)}>
-        {props.count}
-      </button>
-      <h4>{props.count}</h4>
-      <button type="button" onClick={() => console.log("Decrement")}>
-        {props.count}
-      </button>
+    <div style={{ width: 300, margin: "auto" }}>
+      <button onClick={() => props.increment(5)}>Increment</button>
+      <h2>{props.count}</h2>
+      <button onClick={() => props.decrement(5)}>Decrement</button>
     </div>
   );
 }
-// reduxmap
-const mapStateToProps = state => {
-  console.log("state", state);
+
+const mapSTP = state => {
+  console.log(state);
   return {
-    count: state,
-    x: 5,
-    y: 10
+    count: state
   };
 };
 
-const mapDispatchToProps = {
-  increment: () => {}
-};
+// const mapDTP = dispatch => ({
+//   plus: sum =>
+//     dispatch({
+//       type: "INCREMENT",
+//       payload: sum
+//     }),
+//   minus: sum =>
+//     dispatch({
+//       type: "DECREMENT",
+//       payload: sum
+//     })
+// });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+// const mapDTP = {
+//   increment,
+//   decrement
+// };
+
+export default connect(mapSTP, { increment, decrement })(App);
+
+// const connect = (mapStateToProps, mapDispatchToProps) => BaseComponent => {
+//   return class Connect extends Component {
+//     render() {
+//       return <BaseComponent />;
+//     }
+//   };
+// };
