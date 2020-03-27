@@ -18,6 +18,23 @@ export default class App extends Component {
     comments: []
   };
 
+  componentDidMount() {
+    const persistedComments = localStorage.getItem("comments");
+    if (persistedComments) {
+      this.setState({ comments: JSON.parse(persistedComments) });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("update ---->");
+    console.log("prevState", prevState);
+    console.log("this.state", this.state);
+
+    if (prevState.comments !== this.state.comments) {
+      localStorage.setItem("comments", JSON.stringify(this.state.comments));
+    }
+  }
+
   addComment = text => {
     const comment = {
       id: uuId(),
