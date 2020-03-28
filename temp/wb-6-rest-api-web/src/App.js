@@ -4,8 +4,9 @@ import ArticlesList from "./components/ArticlesList";
 import Loader from "./ui/Loader";
 import LoaderNew from "./ui/LoaderNew";
 import ErrorNotification from "./ui/ErrorNotification";
-// import SearchForm from "./components/SearchForm";
-import SearchBox from "./components/SearchBox";
+import CategorySelector from "./components/CategorySelector";
+import SearchForm from "./components/SearchForm";
+// import SearchBox from "./components/SearchBox";
 
 import * as articlesApi from "./services/articlesApi";
 // import articlesApi from "./services/articlesApi";
@@ -26,7 +27,8 @@ export default class App extends Component {
     isLoading: false,
     error: null,
     newArticles: [],
-    query: ""
+    query: "",
+    category: ""
   };
 
   componentDidMount() {
@@ -35,9 +37,23 @@ export default class App extends Component {
     this.getArticles();
   }
 
-  getArticles = () => {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.category !== this.state.category) {
+      this.getArticles(this.state.category);
+    }
+  }
+
+  // getArticles = async query => {
+  //   const articles = await articlesApi
+  //     .fetchArticlesWithQuery(query)
+  //     .then(articles => this.setState({ articles: mapperTransform(articles) }))
+  //     .catch(error => this.setState({ error }))
+  //     .finally(() => this.setState({ isLoading: false }));
+  // };
+
+  getArticles = query => {
     articlesApi
-      .fetchArticlesWithQuery(this.state.query)
+      .fetchArticlesWithQuery(query)
       .then(articles => this.setState({ articles: mapperTransform(articles) }))
       .catch(error => this.setState({ error }))
       .finally(() => this.setState({ isLoading: false }));
@@ -84,8 +100,14 @@ export default class App extends Component {
     this.setState({ query: e.target.value });
   };
 
+  handleCategoryChange = e => {
+    this.setState({
+      category: e.target.value
+    });
+  };
+
   render() {
-    const { articles, isLoading, error, query } = this.state;
+    const { articles, isLoading, error, query, category } = this.state;
 
     return (
       <Fragment>
@@ -94,12 +116,18 @@ export default class App extends Component {
           Fetch articles
         </button>
         <hr />
-        {/* <SearchForm onSubmit={this.getArticles} /> */}
+        <SearchForm onSubmit={this.getArticles} />
         <hr />
-        <SearchBox
+        {/* <SearchBox
           onChange={this.handleQueryChange}
           onSearch={this.getArticles}
           value={query}
+        /> */}
+        <hr />
+        <CategorySelector
+          options={["HTML", "css", "react", "redux"]}
+          value={category}
+          onChange={this.handleCategoryChange}
         />
         <hr />
         {error && <ErrorNotification text={error.message} />}

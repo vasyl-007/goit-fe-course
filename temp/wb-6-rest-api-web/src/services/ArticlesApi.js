@@ -12,7 +12,6 @@ export const fetchArticlesWithQuery = (searchQuery = DEFAULT_QUERY) => {
   );
 };
 
-
 // const fetchArticlesWithQuery = (searchQuery = DEFAULT_QUERY) => {
 //   return (
 //     axios
