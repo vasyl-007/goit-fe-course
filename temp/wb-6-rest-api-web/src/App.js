@@ -4,7 +4,8 @@ import ArticlesList from "./components/ArticlesList";
 import Loader from "./ui/Loader";
 import LoaderNew from "./ui/LoaderNew";
 import ErrorNotification from "./ui/ErrorNotification";
-import SearchForm from "./components/SearchForm";
+// import SearchForm from "./components/SearchForm";
+import SearchBox from "./components/SearchBox";
 
 import * as articlesApi from "./services/articlesApi";
 // import articlesApi from "./services/articlesApi";
@@ -24,7 +25,8 @@ export default class App extends Component {
     articles: [],
     isLoading: false,
     error: null,
-    newArticles: []
+    newArticles: [],
+    query: ""
   };
 
   componentDidMount() {
@@ -33,13 +35,21 @@ export default class App extends Component {
     this.getArticles();
   }
 
-  getArticles = query => {
+  getArticles = () => {
     articlesApi
-      .fetchArticlesWithQuery(query)
+      .fetchArticlesWithQuery(this.state.query)
       .then(articles => this.setState({ articles: mapperTransform(articles) }))
       .catch(error => this.setState({ error }))
       .finally(() => this.setState({ isLoading: false }));
   };
+
+  // getArticles = query => {
+  //   articlesApi
+  //     .fetchArticlesWithQuery(query)
+  //     .then(articles => this.setState({ articles: mapperTransform(articles) }))
+  //     .catch(error => this.setState({ error }))
+  //     .finally(() => this.setState({ isLoading: false }));
+  // };
 
   // componentDidMount() {
   //   this.setState({ isLoading: true });
@@ -70,8 +80,12 @@ export default class App extends Component {
       // .then(res => this.setState({ newArticles: res.hits }));
       .then(({ hits }) => this.setState({ newArticles: hits }));
 
+  handleQueryChange = e => {
+    this.setState({ query: e.target.value });
+  };
+
   render() {
-    const { articles, isLoading, error } = this.state;
+    const { articles, isLoading, error, query } = this.state;
 
     return (
       <Fragment>
@@ -80,7 +94,13 @@ export default class App extends Component {
           Fetch articles
         </button>
         <hr />
-        <SearchForm onSubmit={this.getArticles} />
+        {/* <SearchForm onSubmit={this.getArticles} /> */}
+        <hr />
+        <SearchBox
+          onChange={this.handleQueryChange}
+          onSearch={this.getArticles}
+          value={query}
+        />
         <hr />
         {error && <ErrorNotification text={error.message} />}
         {isLoading && <Loader />}
