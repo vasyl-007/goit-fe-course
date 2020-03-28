@@ -1,9 +1,25 @@
 import axios from "axios";
 
-const fetchArticlesWithQuery = searchQuery => {
-  return axios
-    .get("https://hn.algolia.com/api/v1/search?query=react")
-    .then(response => response.data.hits);
+const BASE_URL = "https://hn.algolia.com/api/v1/search?query=";
+const DEFAULT_QUERY = "react";
+
+export const fetchArticlesWithQuery = (searchQuery = DEFAULT_QUERY) => {
+  return (
+    axios
+      .get(`${BASE_URL}${searchQuery}`)
+      // .get(`https://hn.algolia.com/api/v1/search?query=${searchQuery}`)
+      .then(response => response.data.hits)
+  );
 };
 
-export default { fetchArticlesWithQuery };
+
+// const fetchArticlesWithQuery = (searchQuery = DEFAULT_QUERY) => {
+//   return (
+//     axios
+//       .get(`${BASE_URL}${searchQuery}`)
+//       // .get(`https://hn.algolia.com/api/v1/search?query=${searchQuery}`)
+//       .then(response => response.data.hits)
+//   );
+// };
+
+// export default { fetchArticlesWithQuery };
