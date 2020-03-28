@@ -27,7 +27,6 @@ export default class Chat extends Component {
     const { messages } = this.state;
     return (
       <Fragment>
-        <div>Chat Component</div>
         <div style={chatStyles}>
           <Editor onAddMessage={this.addMessage} />
           <MessageFeed items={messages} />

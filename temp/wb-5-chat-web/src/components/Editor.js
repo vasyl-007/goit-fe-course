@@ -33,7 +33,7 @@ export default class Editor extends Component {
   render() {
     return (
       <Fragment>
-        <div>Editor Component</div>
+          <h2>Try to use this chat :) </h2>
         <form onSubmit={this.handleSubmit} style={styles.form}>
           <input
             style={styles.input}

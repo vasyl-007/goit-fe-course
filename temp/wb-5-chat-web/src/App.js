@@ -4,7 +4,6 @@ import Chat from "./components/Chat";
 function App() {
   return (
     <Fragment>
-      <h4>IT WORKS</h4>
       <Chat />
     </Fragment>
   );

@@ -2,9 +2,10 @@ import React, { createRef, Component, Fragment } from "react";
 import { v4 as uuId } from "uuid";
 
 const listStyles = {
-  height: 400,
-  border: "1px solid green",
-  overflow: "auto"
+  height: 380,
+  border: "2px solid rgb(16, 69, 71)",
+  overflow: "auto",
+  backgroundColor: "rgba(191, 215, 213, 0.75)"
 };
 
 export default class MessageFeed extends Component {
@@ -21,6 +22,8 @@ export default class MessageFeed extends Component {
     }
     return null;
   }
+
+  //   getBoundingClientRect(){}
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log("componentDidUpdate snapshot", snapshot);
