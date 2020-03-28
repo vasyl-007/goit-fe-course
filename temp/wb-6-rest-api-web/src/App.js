@@ -4,6 +4,7 @@ import ArticlesList from "./components/ArticlesList";
 import Loader from "./ui/Loader";
 import LoaderNew from "./ui/LoaderNew";
 import ErrorNotification from "./ui/ErrorNotification";
+import SearchForm from "./components/SearchForm";
 
 import * as articlesApi from "./services/articlesApi";
 // import articlesApi from "./services/articlesApi";
@@ -29,12 +30,26 @@ export default class App extends Component {
   componentDidMount() {
     this.setState({ isLoading: true });
 
+    this.getArticles();
+  }
+
+  getArticles = query => {
     articlesApi
-      .fetchArticlesWithQuery("hooks")
+      .fetchArticlesWithQuery(query)
       .then(articles => this.setState({ articles: mapperTransform(articles) }))
       .catch(error => this.setState({ error }))
       .finally(() => this.setState({ isLoading: false }));
-  }
+  };
+
+  // componentDidMount() {
+  //   this.setState({ isLoading: true });
+
+  //   articlesApi
+  //     .fetchArticlesWithQuery("hooks")
+  //     .then(articles => this.setState({ articles: mapperTransform(articles) }))
+  //     .catch(error => this.setState({ error }))
+  //     .finally(() => this.setState({ isLoading: false }));
+  // }
 
   // handleFetch = () =>
   //   fetch("https://hn.algolia.com/api/v1/search?query=react")
@@ -64,6 +79,8 @@ export default class App extends Component {
         <button type="button" onClick={this.handleFetch}>
           Fetch articles
         </button>
+        <hr />
+        <SearchForm onSubmit={this.getArticles} />
         <hr />
         {error && <ErrorNotification text={error.message} />}
         {isLoading && <Loader />}
