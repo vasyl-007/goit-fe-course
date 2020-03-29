@@ -1,7 +1,7 @@
 import React from "react";
 import Select from "react-select";
 import { connect } from "react-redux";
-import * as timerActions from "../../redux/timerActions";
+import * as timerActions from "../../redux/timer/timerActions";
 
 const options = [
   {

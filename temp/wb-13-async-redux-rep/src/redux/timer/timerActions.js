@@ -6,7 +6,10 @@ export const Type = {
 
 export const increment = value => ({
   type: Type.INCREMENT,
-  payload: value
+  payload: value,
+  meta: {
+    throttle: 2000
+  }
 });
 
 export const decrement = value => ({

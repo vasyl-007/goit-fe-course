@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import throttle from "lodash.throttle";
-import * as timerActions from "../../redux/timerActions";
+// import throttle from "lodash.throttle";
+import * as timerActions from "../../redux/timer/timerActions";
 import Timer from "./Timer";
 
 const mapStateToProps = state => ({
@@ -10,8 +10,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onIncrement: throttle(() => dispatch(timerActions.increment(10)), 2000),
-  onDecrement: throttle(() => dispatch(timerActions.decrement(5)), 2000)
+  onIncrement: () => dispatch(timerActions.increment(10)),
+  onDecrement: () => dispatch(timerActions.decrement(5))
+  // onIncrement: throttle(() => dispatch(timerActions.increment(10)), 2000),
+  // onDecrement: throttle(() => dispatch(timerActions.decrement(5)), 2000)
 });
 
 // const mapStateToProps = state => ({

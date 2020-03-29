@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { Type } from "../timerActions";
+import { Type } from "./timerActions";
 
 
 // const initialState = {
