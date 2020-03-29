@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": ["timer"],
+  "properties": {
+    "timer": {
+      "$id": "#/properties/timer",
+      "type": "object",
+      "title": "The Timer Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "step": {
+            "value": 5.0,
+            "label": 5.0
+          },
+          "value": 300.0
+        }
+      ],
+      "required": ["value", "step"],
+      "properties": {
+        "value": {
+          "$id": "#/properties/timer/properties/value",
+          "type": "integer",
+          "title": "The Value Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [300]
+        },
+        "step": {
+          "$id": "#/properties/timer/properties/step",
+          "type": "object",
+          "title": "The Step Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "value": 5.0,
+              "label": 5.0
+            }
+          ],
+          "required": ["value", "label"],
+          "properties": {
+            "value": {
+              "$id": "#/properties/timer/properties/step/properties/value",
+              "type": "integer",
+              "title": "The Value Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [5]
+            },
+            "label": {
+              "$id": "#/properties/timer/properties/step/properties/label",
+              "type": "integer",
+              "title": "The Label Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [5]
+            }
+          }
+        }
+      }
+    }
+  }
+}
