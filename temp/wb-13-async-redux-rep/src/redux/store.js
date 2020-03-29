@@ -1,9 +1,12 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 // import { devToolsEnhancer } from "redux-devtools-extension";
 import { composeWithDevTools } from "redux-devtools-extension";
+
+// Reducers
 import timerReducer from "./timer/timerReducer";
 import postReducer from "./posts/postReducer";
 
+// Middlewares
 import logger from "redux-logger";
 // import logger from "../redux/middleware/logger";
 import throttle from "./middleware/throttle";
@@ -15,7 +18,9 @@ const rootReducer = combineReducers({
   post: postReducer
 });
 
-const enhancer = applyMiddleware(stateValidator, logger, throttle, analytics); // порядок подключения имеет значение
+const middlewares = [stateValidator, logger, throttle, analytics]; // порядок подключения имеет значение
+const enhancer = applyMiddleware(...middlewares);
+// const enhancer = applyMiddleware(stateValidator, logger, throttle, analytics); // порядок подключения имеет значение
 
 const store = createStore(rootReducer, composeWithDevTools(enhancer));
 // (reducer, perState, enhancer)
