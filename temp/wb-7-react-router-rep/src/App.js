@@ -1,9 +1,11 @@
-import React, { Fragment } from "react";
-import { Route, Switch, Link, NavLink } from "react-router-dom";
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Articles from "./pages/Articles";
 import NotFound from "./pages/NotFound";
+import Nav from "./components/Nav";
+import Article from "./components/Article";
 
 const containerStyles = {
   maxWidth: 1170,
@@ -14,19 +16,10 @@ const containerStyles = {
 
 const App = () => (
   <div style={containerStyles}>
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/articles">Articles</Link>
-      </li>
-      <li>
-        <Link to="/about">About</Link>
-      </li>
-    </ul>
+    <Nav />
     <Switch>
       <Route exact path="/" component={Home} />
+      <Route path="/articles/:articleId" component={Article} />
       <Route path="/articles" component={Articles} />
       <Route path="/about" component={About} />
       <Route component={NotFound} />

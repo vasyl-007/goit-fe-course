@@ -1,0 +1,54 @@
+{
+  "articles": [
+    {
+      "id": "techcrunch",
+      "author": "Danny Crichton",
+      "title": "Join our conference call with immigration attorney Sophie Alcorn Tuesday at 1pm PDT",
+      "description": "The world has been turned upside-down the past few weeks, with flight cancellations, global travel bans and a massive slowdown of worldwide commerce. For immigrants to the United States here on work visas, these are particularly ambiguous and challenging time…",
+      "url": "https://cdn.oreillystatic.com/en/assets/1/event/294/velocityca2019_og_image.jpg",
+      "urlToImage": "https://cdn.oreillystatic.com/en/assets/1/event/294/velocityca2019_og_image.jpg",
+      "publishedAt": "2020-03-23T23:22:01Z",
+      "content": "The world has been turned upside-down the past few weeks, with flight cancellations, global travel bans and a massive slowdown of worldwide commerce.\r\nFor immigrants to the United States here on work visas, these are particularly ambiguous and challenging tim… [+1144 chars]"
+    },
+    {
+      "id": "techcrunch",
+      "author": "Darrell Etherington",
+      "title": "Oura partners with UCSF to determine if its smart ring can help detect COVID-19 early",
+      "description": "Startups continue to find new ways to contribute to ongoing efforts to fight the global spread of COVID-19 during the current global coronavirus pandemic, and personal health hardware-maker Oura is no exception. The smart ring startup is working with the Univ…",
+      "url": "https://cdn.oreillystatic.com/en/assets/1/event/294/velocityca2019_og_image.jpg",
+      "urlToImage": "https://cdn.oreillystatic.com/en/assets/1/event/294/velocityca2019_og_image.jpg",
+      "publishedAt": "2020-03-23T23:08:36Z",
+      "content": "Startups continue to find new ways to contribute to ongoing efforts to fight the global spread of COVID-19 during the current global coronavirus pandemic, and personal health hardware-maker Oura is no exception. The smart ring startup is working with the Univ… [+2152 chars]"
+    },
+    {
+      "id": "techcrunch",
+      "author": "Darrell Etherington",
+      "title": "FDA updates COVID-19 testing guidelines to allow self-swab tests",
+      "description": "The U.S. Food and Drug Administration (FDA) has updated its guidelines for COVID-19 testing procedures, in a bid to both make the process easier and less uncomfortable for patients, and to help limit the impact of testing on the supply of personal protective …",
+      "url": "https://cdn.oreillystatic.com/en/assets/1/event/294/velocityca2019_og_image.jpg",
+      "urlToImage": "https://cdn.oreillystatic.com/en/assets/1/event/294/velocityca2019_og_image.jpg",
+      "publishedAt": "2020-03-23T22:54:37Z",
+      "content": "The U.S. Food and Drug Administration (FDA) has updated its guidelines for COVID-19 testing procedures, in a bid to both make the process easier and less uncomfortable for patients, and to help limit the impact of testing on the supply of personal protective … [+1416 chars]"
+    },
+    {
+      "id": "techcrunch",
+      "author": "Amit Paka, Krishna Gade",
+      "title": "Monitoring is critical to successful AI",
+      "description": "Through real-time monitoring, companies will be given visibility into the “black box” to see exactly how their AI and ML models operate.",
+      "url": "https://cdn.oreillystatic.com/en/assets/1/event/294/velocityca2019_og_image.jpg",
+      "urlToImage": "https://cdn.oreillystatic.com/en/assets/1/event/294/velocityca2019_og_image.jpg",
+      "publishedAt": "2020-03-23T22:38:14Z",
+      "content": "More posts by this contributor\r\nAs the world becomes more deeply connected through IoT devices and networks, consumer and business needs and expectations will soon only be sustainable through automation.\r\nRecognizing this, artificial intelligence and machine … [+2321 chars]"
+    },
+    {
+      "id": "techcrunch",
+      "author": "Megan Rose Dickey",
+      "title": "NYC is offering gig workers delivery jobs during COVID-19 pandemic",
+      "description": "To help gig workers make ends meet during these times of job insecurity amid COVID-19, New York City is offering gig workers who are licensed with the TLC to help with delivery work. While the demand for drivers is currently small, the TLC says it expects dem…",
+      "url": "https://cdn.oreillystatic.com/en/assets/1/event/294/velocityca2019_og_image.jpg",
+      "urlToImage": "https://cdn.oreillystatic.com/en/assets/1/event/294/velocityca2019_og_image.jpg",
+      "publishedAt": "2020-03-23T22:15:26Z",
+      "content": "To help gig workers make ends meet during these times of job insecurity amid COVID-19, New York City is offering gig workers who are licensed with the TLC to help with delivery work.\r\nWhile the demand for drivers is currently small, the TLC says it expects de… [+1573 chars]"
+    }
+  ]
+}

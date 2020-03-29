@@ -6,7 +6,7 @@ const NotFound = () => (
     Sorry, page not found
     <br />
     <br />
-    <img src="https://github.githubassets.com/images/icons/emoji/octocat.png" />
+    <img src="https://github.githubassets.com/images/icons/emoji/octocat.png" alt="cat"/>
     {/* <Picker /> */}
     {/* <span role="img" aria-label="sheep"></span> */}
   </h4>
