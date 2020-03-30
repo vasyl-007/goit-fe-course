@@ -46,7 +46,6 @@ const Button = ({
       type={type}
       disabled={disabled}
       // style={{ backgroundImage: `url(${icon})` }}
-      disabled={disabled}
       // className={btnClasses.join(" ")}
       className={disabled ? styles.disabled : styles.button}
     >

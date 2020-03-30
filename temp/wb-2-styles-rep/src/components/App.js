@@ -39,11 +39,12 @@ const App = () => (
       <ProductList items={products} />
     </Panel>
     <NewDropdown />
-    <Button
+    <NewButton
       label="Hi! I'm NewButton, click on me !"
       icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
       disabled
     />
+    <hr />
   </div>
 );
 

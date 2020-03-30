@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Product from './Product';
+import React from "react";
+import PropTypes from "prop-types";
+import Product from "./Product";
 
 const ProductList = ({ items = [] }) => (
-  <ul>
+  <ul style={{ listStyle: "none" }}>
     {items.map(item => (
       <li key={item.id}>
         <Product {...item} />
@@ -14,7 +14,7 @@ const ProductList = ({ items = [] }) => (
 
 ProductList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string.isRequired }))
-    .isRequired,
+    .isRequired
 };
 
 export default ProductList;
