@@ -1,0 +1,18 @@
+.Button {
+  width: 120 px;
+  height: auto;
+  padding: 16px;
+  background-color: rgb(197, 97, 97);
+  border-radius: 2px;
+}
+
+.Button:hover,
+.Button:focus {
+  background-color: rgb(50, 173, 77);
+  border: 2px solid rgb(231, 192, 192);
+}
+
+.Button-disabled {
+  background-color: rgb(88, 52, 146);
+  color: #fff;
+}
