@@ -1,0 +1,74 @@
+.container {
+  width: 376px;
+  height: 250px;
+  background-size: cover;
+  background-color: #e7ecf2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 111;
+}
+
+.statistics {
+  width: 268px;
+  height: 130px;
+  background-color: #fffdfd;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 112;
+}
+.statistics:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 12px rgba(0, 0, 0, 0.24);
+}
+
+.title {
+  font-family: "Proxima", sans-serif;
+  text-transform: uppercase;
+  color: #606972;
+  text-align: center;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.statList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border-top: 1px solid rgb(236, 226, 226);
+  list-style: none;
+  padding: 0;
+}
+.item {
+  width: 67px;
+  height: auto;
+  /* background-color: #2b4864; */
+  background-size: cover;
+  text-align: center;
+}
+.item:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 12px rgba(0, 0, 0, 0.24);
+}
+
+.statsItem:not(:last-child) {
+  border-right: 1px solid rgb(236, 226, 226);
+}
+.label {
+  display: block;
+  font-size: 12px;
+  padding: 16px 0 6px 0;
+  color: white;
+}
+
+.percentage {
+  display: block;
+  font-size: 16px;
+  padding: 2px 0 12px 0;
+  color: white;
+}
+.percentage:hover {
+  font-weight: 700;
+}
