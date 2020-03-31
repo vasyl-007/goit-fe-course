@@ -1,23 +1,25 @@
 import React, { Fragment } from "react";
-import TransactionItem from "./TransactionItem";
 import PropTypes from "prop-types";
+import TransactionItem from "./TransactionItem";
+import css from "./TransactionHistory.module.css";
 
 const TransactionHistory = ({ items }) =>
   console.log("items", items) || (
-    <Fragment>
-      <h2>IT WORKS</h2>
-      <table className="transaction-history">
-        <thead>
-          <tr>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Currency</th>
+    <div className={css.container}>
+      <h3 className={css.header}>Transactions history</h3>
+      <h4 className={css.subheader}>on a banking account #2600XXXXXXXX</h4>
+      <table className={css.transactionHistory}>
+        <thead className={css.thead}>
+          <tr className={css.headRow}>
+            <th className={css.headColumn}>Type</th>
+            <th className={css.headColumn}>Amount</th>
+            <th className={css.headColumn}>Currency</th>
           </tr>
         </thead>
 
-        <tbody>
+        <tbody className={css.tbody}>
           {items.map(item => (
-            <tr key={item.id}>
+            <tr key={item.id} className={css.bodyRow}>
               <TransactionItem
                 type={item.type}
                 amount={item.amount}
@@ -28,7 +30,7 @@ const TransactionHistory = ({ items }) =>
           ))}
         </tbody>
       </table>
-    </Fragment>
+    </div>
   );
 
 TransactionHistory.propTypes = {
