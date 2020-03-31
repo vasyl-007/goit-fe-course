@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+.name {
+  display: block;
+  font-size: 12px;
+  color: rgb(54, 40, 40);
+  margin: 0 auto;
+}
+.avatar {
+  margin-top: 3px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  margin-left: 30px;
+}
+.online {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: green;
+  margin-left: 8px;
+}
+.offline {
+  composes: online;
+  background-color: rgb(197, 13, 13);
+}
