@@ -1,29 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
+import css from "./Profile.module.css";
 
 const Profile = ({ user: { names, tag, location, avatar, stats } }) => (
-  <div className="profile">
-    <div className="description">
-      <img src={avatar} alt={names} className="avatar" />
-      <p className="name">{names}</p>
-      <p className="tag">{tag}</p>
-      <p className="location">{location}</p>
-    </div>
+  <div className={css.container}>
+    <div className={css.profile}>
+      <div className={css.description}>
+        <img src={avatar} alt={names} className={css.avatar} />
+        <p className={css.name}>{names}</p>
+        <p className={css.tag}>@{tag}</p>
+        <p className={css.location}>{location}</p>
+      </div>
 
-    <ul className="stats">
-      <li>
-        <span className="label">Followers:</span>
-        <span className="quantity">{stats.followers}</span>
-      </li>
-      <li>
-        <span className="label">Views:</span>
-        <span className="quantity">{stats.views}</span>
-      </li>
-      <li>
-        <span className="label">Likes:</span>
-        <span className="quantity">{stats.likes}</span>
-      </li>
-    </ul>
+      <ul className={css.stats}>
+        <li className={css.statsItem}>
+          <span className={css.statsLabel}>Followers</span>
+          <span className={css.statsValue}>{stats.followers}</span>
+        </li>
+        <li className={css.statsItem}>
+          <span className={css.statsLabel}>Views</span>
+          <span className={css.statsValue}>{stats.views}</span>
+        </li>
+        <li className={css.statsItem}>
+          <span className={css.statsLabel}>Likes</span>
+          <span className={css.statsValue}>{stats.likes}</span>
+        </li>
+      </ul>
+    </div>
   </div>
 );
 
@@ -32,6 +35,7 @@ Profile.defaultProps = {
   avatar:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT48qFgcgEBfCXqzPcWmSUcWt_UFCYkBTHNt2CGz9yKmCspUnWJ"
 };
+
 Profile.propTypes = PropTypes.objectOf(
   PropTypes.shape({
     names: PropTypes.string.isRequired,
@@ -44,8 +48,8 @@ Profile.propTypes = PropTypes.objectOf(
         views: PropTypes.number,
         likes: PropTypes.number
       })
-    )
-  }).isRequired
-);
+    ).isRequired
+  })
+).isRequired;
 
 export default Profile;
