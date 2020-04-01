@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/goit-fe-course/tree/master/react/module-hw-1/module-hw-1-4-new/precache-manifest.e3b5d3880b393309ee27ccfbad3b3986.js"
+  "/goit-fe-course/react/module-hw-1/module-hw-1-4-new/precache-manifest.16f28e7f4434ffc9672f6b37cf6f966c.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -33,7 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/goit-fe-course/tree/master/react/module-hw-1/module-hw-1-4-new/index.html"), {
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/goit-fe-course/react/module-hw-1/module-hw-1-4-new/index.html"), {
   
   blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
 });
