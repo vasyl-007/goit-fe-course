@@ -49,10 +49,12 @@ class ContactList extends Component {
       : this.addContact();
   };
 
-  handleDelete = id => {
+  handleDelete = e => {
+    console.log('e.target ----------->', e.target)
+    const id = e.target.id;
     console.log("id", id);
     this.setState({
-      filter: this.state.filter.filter(elem => elem.id !== id)
+      filter: [...this.state.filter.filter(elem => elem.id !== id)]
     });
   };
   render() {
@@ -60,14 +62,14 @@ class ContactList extends Component {
       <>
         <h2>Phonebook</h2>
         <form onSubmit={this.submitData}>
-          <h2>Name</h2>
+          <h3>Name</h3>
           <input
             type="text"
             name="name"
             onChange={this.onChange}
             value={this.state.name}
           />
-          <h2>Number</h2>
+          <h3>Number</h3>
           <input
             type="text"
             name="number"
@@ -80,16 +82,16 @@ class ContactList extends Component {
           </button>
           <br />
         </form>
-        <h2>All Contacts</h2>
+        <h3>All Contacts</h3>
         <ul>
           {this.state.contacts.map(item => (
-            <li>
+            <li key={item.id}>
               {item.name}, {item.number}
             </li>
           ))}
         </ul>
 
-        <h2>Find contact by name</h2>
+        <h3>Find contact by name</h3>
         <input
           type="text"
           onChange={this.onSearchValue}
@@ -98,9 +100,11 @@ class ContactList extends Component {
         ></input>
         <ul>
           {this.state.filter.map(item => (
-            <li onClick={this.handleDelete}>
+            <li key={item.id}>
               {item.name}, {item.number}
-              <button type="button">Delete contact</button>
+              <button id={item.id} type="button" onClick={this.handleDelete}>
+                Delete contact
+              </button>
             </li>
           ))}
         </ul>
