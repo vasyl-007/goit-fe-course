@@ -26,7 +26,7 @@ export default class Modal extends Component {
   }
 
   render() {
-    const { largeImg, alt } = this.props;
+    // const { largeImg, alt } = this.props;
     return (
       <Fragment>
         <div
@@ -35,7 +35,7 @@ export default class Modal extends Component {
           className={s.overlay}
         >
           <div className={s.modal}>
-            <img src={largeImg} alt={alt} />
+            <img src={this.props.largeImg} alt={this.props.alt} />
           </div>
         </div>
       </Fragment>
