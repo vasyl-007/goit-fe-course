@@ -7,6 +7,13 @@ class ContactForm extends Component {
     number: ""
   };
 
+  reset = () => {
+    this.setState({
+      name: "",
+      number: ""
+    });
+  };
+  
   onChange = e => {
     const name = e.target.name;
     const value = e.target.value;
@@ -21,6 +28,7 @@ class ContactForm extends Component {
       ? alert(`${name} is already exists in contacts!`)
       : this.addContact();
   };
+
   addContact = async e => {
     const { name, number } = this.state;
     const newContact = {
@@ -29,6 +37,7 @@ class ContactForm extends Component {
       number
     };
     this.props.addContactToState(newContact);
+    this.reset();
   };
 
   render() {

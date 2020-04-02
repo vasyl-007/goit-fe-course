@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ContactForm from "./components/contactForm/ContactForm";
 import Filter from "./components/filter/Filter";
 
-
 class App extends Component {
   state = {
     contacts: []

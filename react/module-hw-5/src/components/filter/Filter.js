@@ -5,6 +5,12 @@ class Filter extends Component {
     searchName: ""
   };
 
+  reset = () => {
+    this.setState({
+      searchName: ""
+    });
+  };
+  
   onSearchName = e => {
     const name = e.target.name;
     const value = e.target.value;
@@ -25,6 +31,7 @@ class Filter extends Component {
     const id = e.target.id;
     console.log("id", id);
     await this.props.removeContactFromState(id);
+    this.reset();
   };
 
   render() {
