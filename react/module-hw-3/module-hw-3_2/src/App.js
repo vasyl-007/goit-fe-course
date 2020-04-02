@@ -4,6 +4,7 @@ import ImageGallery from "./components/imageGallery/ImageGallery";
 import Button from "./components/button/Button";
 import { fetchArticles } from "./ui/fetcher";
 import Searchbar from "./components/searchbar/Searchbar";
+import Loader from "./components/loader/Loader";
 
 class App extends Component {
   state = {
@@ -12,17 +13,6 @@ class App extends Component {
     pageNumber: 1,
     loading: false
   };
-  //   async componentDidMount() {
-  //     try {
-  //       const data = await fetchArticles();
-  //       this.setState({
-  //         articles: data,
-  //         loading: false
-  //       });
-  //     } catch (er) {
-  //       console.log(er);
-  //     }
-  //   }
 
   getData = async e => {
     this.setState({
@@ -45,6 +35,7 @@ class App extends Component {
   handleChange = e => {
     this.setState({ searchValue: e.target.value });
   };
+
   handleLoadMore = async () => {
     console.log("wewewewew");
     try {
@@ -52,12 +43,6 @@ class App extends Component {
         this.state.searchValue,
         this.state.pageNumber + 1
       );
-      console.log("articles", articles);
-
-      // window.scrollTo({
-      //   top: document.documentElement.scrollHeight,
-      //   behavior: "smooth"
-      // });
 
       this.setState(prevState => ({
         articles: [...prevState.articles, ...articles],
@@ -69,15 +54,17 @@ class App extends Component {
   };
 
   render() {
+    const { searchValue, articles, loading } = this.state;
     return (
       <div className={s.app}>
         <Searchbar
           onSubmit={this.getData}
           onChange={this.handleChange}
-          value={this.state.searchValue}
+          value={searchValue}
         />
-        <ImageGallery articles={this.state.articles} />
-        <Button onLoadMore={this.handleLoadMore} />
+        {loading && <Loader />}
+        <ImageGallery articles={articles} />
+        {articles.length > 0 && <Button onLoadMore={this.handleLoadMore} />}
       </div>
     );
   }

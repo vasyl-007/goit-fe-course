@@ -7,6 +7,7 @@ const ImageGalleryItem = ({ article }) => (
       src={article.webformatURL}
       alt={article.tags}
       className={s.imageGalleryItemImage}
+      data-url={article.largeImageURL}
     />
   </li>
 );
