@@ -11,8 +11,6 @@ class ContactList extends Component {
 
   onSearchValue = e => {
     const name = e.target.name;
-    // console.log('name ------------>', name);
-    // console.log("name ------------>", e.target.name);
     this.setState({
       [name]: e.target.value
     });
@@ -23,6 +21,14 @@ class ContactList extends Component {
     this.setState({ [name]: e.target.value });
   };
 
+  submitData = e => {
+    const { name } = this.state;
+    e.preventDefault();
+    this.state.filter.some(item => item.name.includes(name))
+      ? alert("This !")
+      : this.addContact();
+  };
+
   addContact = async e => {
     const newContact = {
       id: shortId(),
@@ -31,6 +37,15 @@ class ContactList extends Component {
     };
     await this.setState({ filter: [newContact, ...this.state.filter] });
     localStorage.setItem("filter", JSON.stringify(this.state.filter));
+    this.reset();
+  };
+
+  reset = () => {
+    this.setState({
+      name: "",
+      number: "",
+      searchValue: ""
+    });
   };
 
   filterContacts() {
@@ -39,23 +54,16 @@ class ContactList extends Component {
     );
   }
 
-  submitData = e => {
-    e.preventDefault();
-    console.log("this.state.name", this.state.name);
-    this.state.filter.some(item => item.name.includes(this.state.name))
-      ? alert("Такой контанкт уже существует!")
-      : this.addContact();
-  };
-
   handleDelete = async e => {
-    console.log("e.target ----------->", e.target);
     const id = e.target.id;
     console.log("id", id);
     await this.setState({
       filter: [...this.state.filter.filter(elem => elem.id !== id)]
     });
     localStorage.setItem("filter", JSON.stringify(this.state.filter));
+    this.reset();
   };
+
   render() {
     return (
       <>
@@ -81,14 +89,14 @@ class ContactList extends Component {
           </button>
           <br />
         </form>
-        <h3>All Contacts</h3>
+        {/* <h3>All Contacts</h3>
         <ul>
           {this.filterContacts().map(item => (
             <li key={item.id}>
               {item.name}, {item.number}
             </li>
           ))}
-        </ul>
+        </ul> */}
 
         <h3>Find contact by name</h3>
         <input
