@@ -48,10 +48,10 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapSTP = state => {
   return {
     contacts: state.contacts
   };
 };
 
-export default connect(mapStateToProps)(App);
+export default connect(mapSTP)(App);

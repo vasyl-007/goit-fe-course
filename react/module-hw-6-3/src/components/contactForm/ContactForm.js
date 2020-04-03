@@ -11,13 +11,16 @@ class ContactForm extends Component {
   };
 
   handleSubmit = e => {
+    const { name } = this.state;
     e.preventDefault();
     const contact = {
       name: this.state.name,
       number: this.state.number,
       id: shortId.generate()
     };
-    this.props.addContact(contact);
+    this.props.contacts.some(item => item.name.includes(name))
+      ? alert(`${name} is already exists in contacts!`)
+      : this.props.addContact(contact);
   };
 
   handleChange = e => {
@@ -57,4 +60,8 @@ class ContactForm extends Component {
   }
 }
 
-export default connect(null, { addContact })(ContactForm);
+const mapSTP = state => {
+  return { contacts: state.contacts };
+};
+
+export default connect(mapSTP, { addContact })(ContactForm);
