@@ -1,0 +1,19 @@
+.findContact {
+  font-style: italic;
+  font-size: 20px;
+}
+.findInput {
+  display: block;
+  height: 40px;
+  width: 50%;
+  margin: left;
+  border-radius: 6px;
+  padding: 2px 20px;
+  margin-bottom: 40px;
+}
+
+.findInput:focus {
+  border: 1px solid#4040afa2;
+  box-shadow: none;
+  outline: 1px;
+}
