@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import ContactForm from "./components/contactForm/ContactForm";
 import Filter from "./components/filter/Filter";
+import s from "./App.module.css";
 
 class App extends Component {
   state = {
-    contacts: []
+    contacts: [],
   };
 
-  addContactToState = newContact => {
+  addContactToState = (newContact) => {
     const { contacts } = this.state;
     this.setState({ contacts: [newContact, ...contacts] });
     localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
   };
 
-  removeContactFromState = id => {
+  removeContactFromState = (id) => {
     this.setState({
-      contacts: [...this.state.contacts.filter(elem => elem.id !== id)]
+      contacts: [...this.state.contacts.filter((elem) => elem.id !== id)],
     });
     localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
   };
@@ -23,8 +24,8 @@ class App extends Component {
   render() {
     const { contacts } = this.state;
     return (
-      <div>
-        <h2>Phonebook</h2>
+      <div className={s.container}>
+        <h2 className={s.header}>Phonebook</h2>
         <ContactForm
           contacts={contacts}
           addContactToState={this.addContactToState}
