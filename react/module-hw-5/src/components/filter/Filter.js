@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from "react";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import s from "./Filter.module.css";
+import slideTransitions from "./transitions/slide.module.css";
+import popTransitions from "./transitions/pop.module.css";
 
 class Filter extends Component {
   state = {
@@ -48,21 +51,28 @@ class Filter extends Component {
           className={s.input}
           placeholder="Input name contact"
         ></input>
-        <ul className={s.ulFilteredContacts}>
+
+        <TransitionGroup component="ul" className={s.ulFilteredContacts}>
           {this.filterContacts().map((item) => (
-            <li key={item.id} className={s.liFilteredContact}>
-              {item.name}, {item.number} 
-              <button
-                id={item.id}
-                type="button"
-                onClick={this.handleDelete}
-                className={s.button}
-              >
-                Delete
-              </button>
-            </li>
+            <CSSTransition
+              key={item.id}
+              timeout={500}
+              classNames={popTransitions}
+            >
+              <li className={s.liFilteredContact}>
+                {item.name}, {item.number}
+                <button
+                  id={item.id}
+                  type="button"
+                  onClick={this.handleDelete}
+                  className={s.button}
+                >
+                  Delete
+                </button>
+              </li>
+            </CSSTransition>
           ))}
-        </ul>
+        </TransitionGroup>
       </Fragment>
     );
   }
