@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MyContext } from "../context/createContext";
 
-const GetData = (props) => {
+const GetData = () => {
+  const {
+    state: { news },
+  } = useContext(MyContext);
+
+  console.log("useContext", news);
   return <></>;
 };
 

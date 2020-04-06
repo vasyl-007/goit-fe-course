@@ -1,61 +1,87 @@
 import React, { useState, useEffect } from "react";
-import products from "./products.json";
+import products from "./products";
+import axios from "axios";
+import { MyContext } from "./context/createContext";
 import GetData from "./components/GetData";
 
-// console.log("products", products);
 const initialState = {
   word: "work",
   products: [],
+  skill: [],
+  news: [],
 };
 
-const defaultInputValue = { initialState };
+const defaultInputValue = { task: "", description: "" };
+
 const App = () => {
   const [state, setState] = useState(initialState);
-  const [tasks, setTasks] = useState({ task: "", description: "" });
+  const [tasks, setTasks] = useState(defaultInputValue);
 
-  // console.log("state", state);
   const handleClick = () => {
-    console.log("click");
     setState({
       ...state,
-      word: "tasks",
-      products: products,
-      // param: "yes",
+      word: "param",
+      skill: [...state.skill, "ho-ho"],
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setTasks({ task: "", description: "" });
+  useEffect(() => {
+    console.log("didMout");
+    setState((prev) => ({ ...prev, products }));
+  }, [state.skill]);
+
+  const getNews = async () => {
+    const data = await axios.get(
+      "http://newsapi.org/v2/everything?q=bitcoin&from=2020-03-06&sortBy=publishedAt&apiKey=ed5ebee752754cf7a93918ae83acba6f"
+    );
+    console.log(data.data.articles);
+    setState({
+      ...state,
+      news: data.data.articles,
+    });
   };
 
+  useEffect(() => {
+    getNews();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(tasks);
+    setTasks(defaultInputValue);
+  };
   const handleChange = (e) => {
     setTasks({ ...tasks, [e.target.name]: e.target.value });
   };
 
   return (
-    <div>
-      <h4>IT WORKS</h4>
-      {/* <p>{state.word}</p> */}
-      <button onClick={handleClick}>BUTTON</button>
+    <MyContext.Provider
+      value={{
+        state,
+      }}
+    >
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="task"
-          placeholder="Enter your text..."
-          onChange={handleChange}
+          placeholder="enter your text ..."
           value={tasks.task}
+          onChange={handleChange}
         />
         <input
           type="text"
           name="description"
-          placeholder="Enter your text..."
-          onChange={handleChange}
+          placeholder="enter your text ..."
           value={tasks.description}
+          onChange={handleChange}
         />
-        <button type="submit">CLICK</button>
+        <button type="submit">Send</button>
       </form>
-    </div>
+      <h2>{state.word}</h2>
+      <button onClick={handleClick}>click</button>
+      <GetData />
+    </MyContext.Provider>
   );
 };
 
